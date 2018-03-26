@@ -1,0 +1,2 @@
+class ProductVariation < ApplicationRecord
+end
