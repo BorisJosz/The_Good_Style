@@ -21,13 +21,6 @@ user = User.create!(
 })
 user.save!
 
-# generate target_audiences
-# TargetAudience.create!(
-#   { gender: "men",
-#     target_photo: 'string string',
-#     product_id: 1,
-# })
-
 # generate products
 Product.create!(
   { id: 1,
@@ -83,4 +76,11 @@ Product.create!(
     description: 'Why not bring some colors to your style with these superbe items',
     price: '90€',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
+})
+
+# generate target_audiences
+TargetAudience.create!(
+  { gender: "men",
+    target_photo: 'string string',
+    product_id: 7,
 })
