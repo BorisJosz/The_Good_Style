@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180326145623) do
+ActiveRecord::Schema.define(version: 20180327150845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 20180326145623) do
     t.text "distance_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "target_audience_id"
+    t.index ["target_audience_id"], name: "index_products_on_target_audience_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -116,10 +118,8 @@ ActiveRecord::Schema.define(version: 20180326145623) do
   create_table "target_audiences", force: :cascade do |t|
     t.string "gender"
     t.string "target_photo"
-    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_target_audiences_on_product_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -153,5 +153,4 @@ ActiveRecord::Schema.define(version: 20180326145623) do
   add_foreign_key "shopping_carts", "users"
   add_foreign_key "sizes", "product_variations"
   add_foreign_key "stocks", "product_variations"
-  add_foreign_key "target_audiences", "products"
 end
