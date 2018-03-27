@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327150845) do
+ActiveRecord::Schema.define(version: 20180327153435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,11 +24,9 @@ ActiveRecord::Schema.define(version: 20180327150845) do
     t.text "size_chart"
     t.integer "shipping_costs"
     t.string "url"
-    t.bigint "product_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_brands_on_product_id"
     t.index ["user_id"], name: "index_brands_on_user_id"
   end
 
@@ -64,6 +62,8 @@ ActiveRecord::Schema.define(version: 20180327150845) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "target_audience_id"
+    t.bigint "brand_id"
+    t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["target_audience_id"], name: "index_products_on_target_audience_id"
   end
 
@@ -142,7 +142,6 @@ ActiveRecord::Schema.define(version: 20180327150845) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "brands", "products"
   add_foreign_key "brands", "users"
   add_foreign_key "colors", "product_variations"
   add_foreign_key "product_categories", "products"
