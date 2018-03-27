@@ -8,6 +8,7 @@
 puts 'starting the seeds'
 User.destroy_all
 Product.destroy_all
+Brand.destroy_all
 
 # generate user
 puts 'creating users'
@@ -84,3 +85,19 @@ TargetAudience.create!(
     target_photo: 'string string',
     product_id: 7,
 })
+
+# generate brand
+user  = User.all.sample
+product = Product.all.sample
+puts 'creating brands'
+brand = Brand.create!(
+  { name: 'Fabbrikka',
+    address: 'Belgium, Brussels',
+    description: 'fashion clothes made with love',
+    url:'https://fabbrikka.com/',
+    image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
+    user: user,
+    product: product,
+})
+brand.save!
+
