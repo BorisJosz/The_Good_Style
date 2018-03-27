@@ -24,7 +24,7 @@ user.save!
 # generate products
 Product.create!(
   { name: 'White blouse',
-    description: 'Sustainable bamboo, cotton, wool and hemp fabrics, ethical production practices',
+    description: 'Lovely light dress, perfect for summer!',
     price: '80',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
 })
@@ -55,4 +55,18 @@ Product.create!(
     description: 'This pair of shorts and t-shirt were made for you',
     price: '280€',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651af83e00be66d5f7b256/1499798296479/?format=750w',
+})
+
+Product.create!(
+  { name: 'Lovely pink-ish',
+    description: 'Arboring a splendid rose beige color, this dress is sure to turn heads',
+    price: '50€',
+    image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b252e69cf0722dbac40/1499798319087/?format=1000w',
+})
+
+Product.create!(
+  { name: 'Colorful dress',
+    description: 'Why not bring some colors to your style with these superbe items',
+    price: '90€',
+    image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
 })
