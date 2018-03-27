@@ -10,16 +10,16 @@ User.destroy_all
 Product.destroy_all
 
 # generate user
-puts 'creating users'
-user = User.create!(
-  { name: 'John Smith',
-    address: 'White House, US of A',
-    telephone: '911',
-    email: 'John.Smith@gmail.com',
-    password: '123456',
-    password_confirmation: '123456'
-})
-user.save!
+# puts 'creating users'
+# user = User.create!(
+#   { name: 'John Smith',
+#     address: 'White House, US of A',
+#     telephone: '911',
+#     email: 'John.Smith@gmail.com',
+#     password: '123456',
+#     password_confirmation: '123456'
+# })
+# user.save!
 
 # generate products
 Product.create!(
