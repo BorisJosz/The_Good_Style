@@ -1,0 +1,49 @@
+.social {
+  background-color: #155162;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: white;
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+.footer-h1 {
+  letter-spacing: 0.1em;
+  color: #000000;
+  line-height: 1.05em;
+  font-weight: light;
+  font-size: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-h2 {
+  letter-spacing: 0.1em;
+  color: #000000;
+  line-height: 1.05em;
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.row {
+  color: red;
+}
+
+.footer-spacing {
+  width: 200px;
+  padding: 0px 20px;
+}
