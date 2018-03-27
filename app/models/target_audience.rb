@@ -1,5 +1,5 @@
 class TargetAudience < ApplicationRecord
   belongs_to :product
-  validates :gender, presence:true, inclusion: { in: ("Men", "Women", "Kids")}
+  validates :gender, presence: true, inclusion:  { in: ["men", "women", "kids"] }
   validates :target_photo, presence:true
 end
