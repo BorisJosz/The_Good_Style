@@ -9,7 +9,13 @@ puts 'starting the seeds'
 User.destroy_all
 Product.destroy_all
 Brand.destroy_all
-
+TargetAudience.destroy_all
+# generate target_audiences
+puts 'target audience'
+TargetAudience.create!(
+  { gender: "men",
+    target_photo: 'string string',
+})
 # generate user
 puts 'creating users'
 user = User.create!(
@@ -23,8 +29,10 @@ user = User.create!(
 user.save!
 
 # generate products
+puts 'creating products'
 Product.create!(
-  { id: 1,
+  {
+    target_audience: TargetAudience.all.sample,
     name: 'White blouse',
     description: 'Lovely light dress, perfect for summer!',
     price: '80',
@@ -32,7 +40,8 @@ Product.create!(
 })
 
 Product.create!(
-  { id: 2,
+  {
+    target_audience: TargetAudience.all.sample,
     name: 'Comfy sweater',
     description: 'Straight from India',
     price: '60',
@@ -40,7 +49,8 @@ Product.create!(
   })
 
 Product.create!(
-  { id: 3,
+  {
+    target_audience: TargetAudience.all.sample,
     name: 'Casual dress',
     description: 'Made with sustainable materials at heart, a comfortable and light dress to wear on any day',
     price: '120',
@@ -48,7 +58,8 @@ Product.create!(
   })
 
 Product.create!(
-  { id: 4,
+  {
+    target_audience: TargetAudience.all.sample,
     name: 'Simple & Sexy',
     description: 'Wow your partner in this simple yet elegant dress',
     price: '80',
@@ -56,7 +67,8 @@ Product.create!(
   })
 
 Product.create!(
-  { id: 5,
+  {
+    target_audience: TargetAudience.all.sample,
     name: 'White ensemble',
     description: 'This pair of shorts and t-shirt were made for you',
     price: '280€',
@@ -64,7 +76,8 @@ Product.create!(
   })
 
 Product.create!(
-  { id: 6,
+  {
+    target_audience: TargetAudience.all.sample,
     name: 'Lovely pink-ish',
     description: 'Arboring a splendid rose beige color, this dress is sure to turn heads',
     price: '50€',
@@ -72,22 +85,18 @@ Product.create!(
   })
 
 Product.create!(
-  { id: 7,
+  {
+    target_audience: TargetAudience.all.sample,
     name: 'Colorful dress',
     description: 'Why not bring some colors to your style with these superbe items',
     price: '90€',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
 })
 
-# generate target_audiences
-TargetAudience.create!(
-  { gender: "men",
-    target_photo: 'string string',
-    product_id: 7,
-})
+
 
 # generate brand
-user  = User.all.sample
+user = User.all.sample
 product = Product.all.sample
 puts 'creating brands'
 brand = Brand.create!(
@@ -100,4 +109,3 @@ brand = Brand.create!(
     product: product,
 })
 brand.save!
-
