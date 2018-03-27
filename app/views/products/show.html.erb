@@ -3,3 +3,6 @@
 <%= @product.name%>
 <%= @product.price%>
 <%= @product.description%>
+<%= image_tag @product.image %>
+<br>
+<%= link_to 'Go back', products_path(@products)%>

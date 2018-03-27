@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+puts 'starting the seeds'
 User.destroy_all
+Product.destroy_all
+
 # generate user
+puts 'creating users'
 user = User.create!(
   { name: 'John Smith',
     address: 'White House, US of A',
@@ -18,7 +21,6 @@ user = User.create!(
 })
 user.save!
 
-Product.destroy_all
 # generate products
 Product.create!(
   { name: 'White blouse',
@@ -32,7 +34,7 @@ Product.create!(
     description: 'Straight from India',
     price: '60',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/596519e915d5db63fc7384bd/1501015792187/?format=1000w',
-})
+  })
 
 Product.create!(
   { name: 'Casual dress',
