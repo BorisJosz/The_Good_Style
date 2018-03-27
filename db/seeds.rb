@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'starting the seeds'
-User.destroy_all
+
 TargetAudience.destroy_all
 Brand.destroy_all
+User.destroy_all
 Product.destroy_all
 # generate target_audiences
 
