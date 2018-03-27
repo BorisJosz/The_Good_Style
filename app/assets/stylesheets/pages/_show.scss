@@ -1,0 +1,61 @@
+.show-page {
+  height: 500px;
+  padding: 0
+}
+
+.show-page h2 {
+  font-weight: 200;
+}
+
+.show-page h3 {
+  font-weight: 200;
+}
+
+.show-page p {
+  font-weight: 300;
+}
+
+.imagebox {
+  padding-right: 50px;
+  border-right: 1px solid #B1B4B7;
+}
+
+.show-image {
+  height: 500px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.textbox {
+  height: 100%;
+  padding-left: 50px;
+  position: relative;
+}
+
+.fa-ellipsis-v {
+  color: #F0B917;
+}
+
+.paddingrow {
+  padding: 50px;
+}
+
+.selectors {
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+  width: 70%;
+}
+
+.select {
+  flex: 1 1 50%;
+}
+
+.select h5 {
+  font-weight: 400;
+}
+
+.fa-chevron-down {
+  color: #F0B917;
+}
+
