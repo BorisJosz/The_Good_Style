@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'starting the seeds'
-User.destroy_all
+# User.destroy_all
 Product.destroy_all
 Brand.destroy_all
 TargetAudience.destroy_all
@@ -17,16 +17,16 @@ TargetAudience.create!(
     target_photo: 'string string',
 })
 # generate user
-puts 'creating users'
-user = User.create!(
-  { name: 'John Smith',
-    address: 'White House, US of A',
-    telephone: '911',
-    email: 'John.Smith@gmail.com',
-    password: '123456',
-    password_confirmation: '123456'
-})
-user.save!
+# puts 'creating users'
+# user = User.create!(
+#   { name: 'John Smith',
+#     address: 'White House, US of A',
+#     telephone: '911',
+#     email: 'John.Smith@gmail.com',
+#     password: '123456',
+#     password_confirmation: '123456'
+# })
+# user.save!
 
 # generate products
 puts 'creating products'
@@ -35,7 +35,7 @@ Product.create!(
     target_audience: TargetAudience.all.sample,
     name: 'White blouse',
     description: 'Lovely light dress, perfect for summer!',
-    price: '80',
+    price: '80 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
 })
 
@@ -44,7 +44,7 @@ Product.create!(
     target_audience: TargetAudience.all.sample,
     name: 'Comfy sweater',
     description: 'Straight from India',
-    price: '60',
+    price: '60 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/596519e915d5db63fc7384bd/1501015792187/?format=1000w',
   })
 
@@ -53,7 +53,7 @@ Product.create!(
     target_audience: TargetAudience.all.sample,
     name: 'Casual dress',
     description: 'Made with sustainable materials at heart, a comfortable and light dress to wear on any day',
-    price: '120',
+    price: '120 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651a66ebbd1a5c3be28b08/1499798126449/?format=2500w',
   })
 
@@ -62,7 +62,7 @@ Product.create!(
     target_audience: TargetAudience.all.sample,
     name: 'Simple & Sexy',
     description: 'Wow your partner in this simple yet elegant dress',
-    price: '80',
+    price: '80 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/5977b1e02e69cffa18f371ec/1501016556294/?format=750w',
   })
 
@@ -71,7 +71,7 @@ Product.create!(
     target_audience: TargetAudience.all.sample,
     name: 'White ensemble',
     description: 'This pair of shorts and t-shirt were made for you',
-    price: '280€',
+    price: '280 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651af83e00be66d5f7b256/1499798296479/?format=750w',
   })
 
@@ -80,7 +80,7 @@ Product.create!(
     target_audience: TargetAudience.all.sample,
     name: 'Lovely pink-ish',
     description: 'Arboring a splendid rose beige color, this dress is sure to turn heads',
-    price: '50€',
+    price: '50 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b252e69cf0722dbac40/1499798319087/?format=1000w',
   })
 
@@ -89,7 +89,7 @@ Product.create!(
     target_audience: TargetAudience.all.sample,
     name: 'Colorful dress',
     description: 'Why not bring some colors to your style with these superbe items',
-    price: '90€',
+    price: '90 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
 })
 

@@ -1,8 +1,35 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
-<%= @product.name%>
-<%= @product.price%>
-<%= @product.description%>
-<%= image_tag @product.image %>
-<br>
-<%= link_to 'Go back', products_path(@products)%>
+
+<div class="wrapper">
+  <div class="container text-center">
+    <div class="row paddingrow">
+      <div class="col-xs-12 col-sm-5 show-page">
+        <div class="imagebox">
+        <div class="show-image" style="background-image:url(<%= @product.image %>); " alt = "product">
+        </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-7 show-page text-left">
+        <div class="textbox">
+        <h2><i class="fas fa-ellipsis-v"></i> <%= @product.name%></h2>
+        <h3>€ <%= @product.price%></h3>
+        <br>
+        <p><%= @product.description%></p>
+        <div class="selectors">
+          <div class="select">
+            <h5>Pick your size &nbsp; <i class="fas fa-chevron-down"></i>
+</h5>
+          </div>
+          <div class="select">
+            <h5>Pick your color &nbsp; <i class="fas fa-chevron-down"></i>
+</h5>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class = "buttonbox"><%= link_to 'SHOP MORE', products_path(@products), class:"btn-standard"%></div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,22 @@
+.btn-standard {
+  color: white;
+  font-family: 'Oswald';
+  padding: 13px 23px;
+  border-radius: 2px;
+  font-weight: 200;
+  font-size: 20px;
+  background: #155263;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
+
+}
+.btn-standard:hover {
+  opacity: 1;
+  background: #186378;
+  text-decoration: none;
+  color: white;
+}
+
+.buttonbox {
+  margin: 50px 30px;
+}
