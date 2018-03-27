@@ -6,39 +6,18 @@
     <br>
 
     <div class="row">
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <%= render 'shared/card' %>
-      </div>
-
+      <% @products.each do |p| %>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class = "card text-center">
+            <div class="card-image-container" style="background-image:url(<%= p.image %>); " alt="cart">
+            </div>
+            <div class="card-text">
+              <h3><%= p.description %></h3>
+              <h4><%= p.price %></h4>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
