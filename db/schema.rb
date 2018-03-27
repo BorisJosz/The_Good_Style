@@ -131,9 +131,6 @@ ActiveRecord::Schema.define(version: 20180326145623) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name", presence: true
-    t.string "address", presence: true
-    t.string "telephone"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
