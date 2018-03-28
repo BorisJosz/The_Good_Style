@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="container text-center">
+    <%= image_tag ("https://res.cloudinary.com/megednazednav/image/upload/v1522237746/The%20Good%20Style/logo.png"), width: "100px", class: "centered-logo" %>
+    <h1>Shop our beautiful women's clothes</h1>
+    <br>
+    <br>
+    <div class="row">
+      <% @products.each do |product| %>
+      <%= link_to product_path(product) do %>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class = "card text-center">
+            <div class="card-image-container" style="background-image:url(<%= product.image %>); " alt="cart">
+            </div>
+            <div class="card-text">
+              <h3><%= product.name %></h3>
+              <h4><%= product.price %>€</h4>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
