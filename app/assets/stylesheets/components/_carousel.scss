@@ -1,18 +1,68 @@
 .carousel-inner .item {
-  height: calc(100vh - 54px);
+  height: calc(100vh - 108px);
 }
 
-.item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: calc(100vh - 54px);
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: calc(100vh - 108px);
 }
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+.carousel-inner {
     width: 100vw;
 }
 
 .carousel-image {
   background-size: cover;
+}
+
+.carousel-logo {
+
+}
+
+.carousel-button {
+  width: 100vw;
+  height: 54px;
+  background-color: #155061;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  &:hover {
+    background-color: #0F3C49;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+.sustainability-info {
+  width: 100vw;
+  background-color: #F9F8EB;
+  p {
+    padding: 50px 50px 20px 50px;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: justify;
+  }
+}
+
+.sustainable-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sustainable-icons img {
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  margin-bottom: 50px;
 }

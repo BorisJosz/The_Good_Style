@@ -16,7 +16,7 @@
       <div class="item carousel-image" style="background-image: url('https://res.cloudinary.com/megednazednav/image/upload/v1522237746/The%20Good%20Style/carousel2.jpg')">
       </div>
 
-      <div class="item carousel-image" style="background-image: url('https://res.cloudinary.com/megednazednav/image/upload/v1522237746/The%20Good%20Style/carousel3.jpg')">
+      <div class="item carousel-image" style="background-image: url('http://res.cloudinary.com/megednazednav/image/upload/c_scale,h_1080,w_1920/v1522237746/The%20Good%20Style/carousel3.jpg')">
       </div>
 
     </div>
@@ -33,19 +33,42 @@
   </div>
 </div>
 
-<div class="audience-container">
-  <div class="row">
-  <%  @target_audiences.each do |audience| %>
-    <div class="col-xs-12 col-sm-4">
-      <%= link_to "/#{audience.gender}" do  %>
-        <div class = "card-audience" style="background-image: url('assets/audience_kid.jpg')" alt ="picture audience";>
-          <div class= "card-audience-text">
-            <h2> <%= audience.gender.capitalize %></h2>
+
+<a href="#S1">
+  <div class="carousel-button">
+    Scroll down below or click here to see our offer
+  </div>
+</a>
+
+
+<div id='S1' class="container">
+  <div class="audience-container">
+    <div class="row">
+      <%  @target_audiences.each do |audience|  %>
+        <div class="col-xs-12 col-sm-4">
+
+          <div class = "card-audience" style="background-image: url('assets/audience_kid.jpg')" alt ="picture audience";>
+            <div class= "card-audience-text">
+              <h2> <%= audience.gender.capitalize %></h2>
+            </div>
           </div>
         </div>
-    <%end %>
-
+      <% end %>
     </div>
-    <%end %>
+  </div>
+</div>
+
+
+
+<div class="sustainability-info">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, obcaecati? Quibusdam, pariatur placeat culpa optio officiis voluptas. Maiores earum animi officiis fuga, dolorum alias impedit quae illum quia cum, accusamus libero quod dolorem voluptatibus, quis natus nisi. Qui repellendus, ex ullam praesentium, accusantium doloribus laudantium deserunt vitae modi minus, adipisci nulla consequuntur deleniti incidunt pariatur ducimus eaque numquam dolore sequi.
+  Officiis nemo incidunt iste expedita illo. Quo placeat itaque, commodi tenetur temporibus quaerat aperiam quibusdam repellat voluptates sapiente dicta tempore id quia necessitatibus sit excepturi quas quisquam aut voluptate animi laboriosam laborum doloremque nulla! Delectus ex possimus, quaerat placeat quidem.
+  </p>
+  <div class="sustainable-icons">
+    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/117607-200.png') %>
+    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/430000-200.png') %>
+    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/1299961-200.png') %>
+    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/199783-200.png') %>
+
   </div>
 </div>
