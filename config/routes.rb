@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+
+  resources :target_audience, only: [:index]
+
   resources :products, only: [:index, :show]
   resources :brands, only: [:index, :show]
 
