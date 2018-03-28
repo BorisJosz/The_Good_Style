@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327153435) do
+ActiveRecord::Schema.define(version: 20180328092722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,22 +32,25 @@ ActiveRecord::Schema.define(version: 20180327153435) do
 
   create_table "colors", force: :cascade do |t|
     t.string "color"
-    t.bigint "product_variation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_variation_id"], name: "index_colors_on_product_variation_id"
   end
 
   create_table "product_categories", force: :cascade do |t|
-    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_product_categories_on_product_id"
+    t.string "category"
   end
 
   create_table "product_variations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "color_id"
+    t.bigint "product_id"
+    t.bigint "size_id"
+    t.index ["color_id"], name: "index_product_variations_on_color_id"
+    t.index ["product_id"], name: "index_product_variations_on_product_id"
+    t.index ["size_id"], name: "index_product_variations_on_size_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -63,7 +66,9 @@ ActiveRecord::Schema.define(version: 20180327153435) do
     t.datetime "updated_at", null: false
     t.bigint "target_audience_id"
     t.bigint "brand_id"
+    t.bigint "product_category_id"
     t.index ["brand_id"], name: "index_products_on_brand_id"
+    t.index ["product_category_id"], name: "index_products_on_product_category_id"
     t.index ["target_audience_id"], name: "index_products_on_target_audience_id"
   end
 
@@ -101,10 +106,8 @@ ActiveRecord::Schema.define(version: 20180327153435) do
 
   create_table "sizes", force: :cascade do |t|
     t.string "size"
-    t.bigint "product_variation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_variation_id"], name: "index_sizes_on_product_variation_id"
   end
 
   create_table "stocks", force: :cascade do |t|
@@ -143,13 +146,10 @@ ActiveRecord::Schema.define(version: 20180327153435) do
   end
 
   add_foreign_key "brands", "users"
-  add_foreign_key "colors", "product_variations"
-  add_foreign_key "product_categories", "products"
   add_foreign_key "reviews", "products"
   add_foreign_key "reviews", "users"
   add_foreign_key "shopping_cart_items", "product_variations"
   add_foreign_key "shopping_cart_items", "shopping_carts"
   add_foreign_key "shopping_carts", "users"
-  add_foreign_key "sizes", "product_variations"
   add_foreign_key "stocks", "product_variations"
 end

@@ -1,3 +1,3 @@
 class Color < ApplicationRecord
-  belongs_to :product_variation
+  has_many :product_variations
 end
