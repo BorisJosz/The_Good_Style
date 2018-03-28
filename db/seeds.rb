@@ -16,19 +16,19 @@ Product.destroy_all
 puts 'target audience'
 TargetAudience.create!(
   { gender: "men",
-    target_photo: 'string string',
+    target_photo: 'audience_man.jpg'
   }
 )
 
 TargetAudience.create!(
   { gender: "women",
-  target_photo: "string but women",
+  target_photo: "audience_woman.jpg"
 }
 )
 
 TargetAudience.create!(
   {gender: "kids",
-  target_photo: "small string",
+  target_photo: "https://farm2.staticflickr.com/1121/3165569990_bd28a9866a_b.jpg",
 }
 )
 
