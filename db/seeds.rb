@@ -16,19 +16,19 @@ Product.destroy_all
 puts 'target audience'
 TargetAudience.create!(
   { gender: "men",
-    target_photo: 'string string',
-  }
+    target_photo:'https://farm1.staticflickr.com/700/23200390351_86fa303506_b.jpg',
+}
 )
 
 TargetAudience.create!(
   { gender: "women",
-  target_photo: "string but women",
+  target_photo: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
 }
 )
 
 TargetAudience.create!(
   {gender: "kids",
-  target_photo: "small string",
+  target_photo: "https://farm2.staticflickr.com/1121/3165569990_bd28a9866a_b.jpg",
 }
 )
 
