@@ -16,13 +16,13 @@ Product.destroy_all
 puts 'target audience'
 TargetAudience.create!(
   { gender: "men",
-    target_photo: 'audience_man.jpg'
+    target_photo: 'https://unsplash.com/photos/2yNdkpJ75Ic',
   }
 )
 
 TargetAudience.create!(
   { gender: "women",
-  target_photo: "audience_woman.jpg"
+  target_photo: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
 }
 )
 
