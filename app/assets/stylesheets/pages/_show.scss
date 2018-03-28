@@ -59,3 +59,53 @@
   color: #F0B917;
 }
 
+.backgroundbrand {
+  background-color: #76B39D;
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.brandbox.one {
+  flex: 1 1 20%;
+}
+
+.brandbox.two {
+  flex: 1 1 80%;
+  padding: 0 25px;
+}
+
+.brandbox.two p {
+  font-size: 16px;
+}
+
+.roundedlogo {
+  border-radius: 50%;
+}
+
+.infobox {
+  padding: 25px 25px 70px 25px;
+  display: flex;
+  align-items: center;
+}
+
+.subinfobox {
+  flex: 1 1 50%;
+  padding: 0 15px;
+}
+
+.infodetail {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.infodetailleft {
+  flex: 1 1 20%;
+}
+
+.infodetailright {
+  flex: 1 1 80%;
+}
