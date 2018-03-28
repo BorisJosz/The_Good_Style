@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-
-  resources :target_audience, only: [:index]
-
-  resources :products, only: [:index, :show]
+  resources :products, only: [:show]
+  get "women", to: "target_audiences#women"
+  get "men", to: "target_audiences#men"
+  get "kids", to: "target_audiences#kids"
   resources :brands, only: [:index, :show]
 
   devise_for :users

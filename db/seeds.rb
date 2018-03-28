@@ -54,6 +54,14 @@ brand = Brand.create!(
     user: User.all.sample,
 })
 
+#generating product categories
+
+puts 'creating product categories'
+ProductCategory.create!(
+{
+  category: "trousers",
+  })
+
 # generate products
 puts 'creating products'
 Product.create!(
@@ -64,6 +72,7 @@ Product.create!(
     price: '80 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
     brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample
   })
 
 Product.create!(
@@ -74,6 +83,7 @@ Product.create!(
     price: '60 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/596519e915d5db63fc7384bd/1501015792187/?format=1000w',
     brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample
   })
 
 Product.create!(
@@ -84,6 +94,7 @@ Product.create!(
     price: '120 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651a66ebbd1a5c3be28b08/1499798126449/?format=2500w',
     brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample
   })
 
 Product.create!(
@@ -94,6 +105,7 @@ Product.create!(
     price: '80 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/5977b1e02e69cffa18f371ec/1501016556294/?format=750w',
     brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample
   })
 
 Product.create!(
@@ -104,6 +116,7 @@ Product.create!(
     price: '280 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651af83e00be66d5f7b256/1499798296479/?format=750w',
     brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample
   })
 
 Product.create!(
@@ -114,6 +127,7 @@ Product.create!(
     price: '50 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b252e69cf0722dbac40/1499798319087/?format=1000w',
     brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample
   })
 
 Product.create!(
@@ -124,4 +138,5 @@ Product.create!(
     price: '90 €',
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
     brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample
   })
