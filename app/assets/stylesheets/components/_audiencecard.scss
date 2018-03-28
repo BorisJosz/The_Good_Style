@@ -1,6 +1,8 @@
 .audience-container {
-  width: 1400px;
-  padding: 20px;
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+
 }
 
 .card-audience {
@@ -28,6 +30,6 @@
 
 .card-audience:hover {
   opacity: 1;
-  border: 3px solid #155162;
-  border-radius: 5px;
+  border-top: 3px solid #155162;
+  border-bottom: 3px solid #155162;
 }
