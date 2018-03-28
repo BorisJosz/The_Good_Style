@@ -16,8 +16,8 @@ Product.destroy_all
 puts 'target audience'
 TargetAudience.create!(
   { gender: "men",
-    target_photo: 'https://unsplash.com/photos/2yNdkpJ75Ic',
-  }
+    target_photo:'https://farm1.staticflickr.com/700/23200390351_86fa303506_b.jpg',
+}
 )
 
 TargetAudience.create!(
