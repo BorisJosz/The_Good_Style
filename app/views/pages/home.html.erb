@@ -35,14 +35,14 @@
 
 <div class="audience-container">
   <div class="row">
-  <%  @target_audiences.each do |audience|  %>
-      <div class="col-xs-12 col-sm-4">
+  <%  @target_audiences.each do |audience| %>
+    <div class="col-xs-12 col-sm-4">
         <div class = "card-audience" style="background-image: url('assets/audience_kid.jpg')" alt ="picture audience";>
-        <div class= "card-audience-text">
-        <h2> <%= audience.gender.capitalize %></h2>
+          <div class= "card-audience-text">
+            <h2> <%= audience.gender.capitalize %></h2>
+          </div>
         </div>
-      </div>
     </div>
-  <% end %>
+    <%end %>
   </div>
-<div class="audience-container">
+</div>
