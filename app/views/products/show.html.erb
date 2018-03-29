@@ -25,9 +25,9 @@
   <%= f.input :color, collection: @product.colors, value_method: :id,label_method: :color %>
   <%= f.button :submit %>
 <% end %>
-
-
-
+ <% unless current_user.nil? %>
+ <%= link_to "shoopping cart ", shopping_cart_path(current_user.current_shopping_cart) %>
+<% end %>
             </div>
             <div class="select">
               <h5>Pick your color &nbsp; <i class="fas fa-chevron-down"></i>

@@ -27,11 +27,8 @@ class ShoppingCartsController < ApplicationController
        params.require(:product_variation).permit(:size, :color)
   end
 
-  def index
-    @shopping_cart_items = ShoppingCartItem.all
-  end
 
   def show
-    @shopping_cart_item = ShoppingCartItem.find(params[:id])
+    @shoppingCart = ShoppingCart.where(user: current_user, status: false)[0]
   end
 end

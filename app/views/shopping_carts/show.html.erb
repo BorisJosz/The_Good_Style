@@ -1,0 +1,11 @@
+
+<p> Chris stuff area </p>
+
+<p> ***************** </p>
+
+<p> Aline stuff area</p>
+<% @shoppingCart.shopping_cart_items.each do |item| %>
+<%= item.quantity %>
+<%= item.product_variation.product.name %>
+
+<% end %>
