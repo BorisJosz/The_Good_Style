@@ -7,12 +7,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   def current_shopping_cart
-    shoppingCart = ShoppingCart.where(user: self, status: false)
-   if shoppingCart.empty?
+    shoppingCart = ShoppingCart.where(user: self, status: false).first
+   if shoppingCart.nil?
     # 4 if we don't have a shopping cart, we create one
     shoppingCart = ShoppingCart.create(user: self, status: false)
    end
-  return shoppingCart.first
+  return shoppingCart
 
   end
 end

@@ -17,6 +17,17 @@
   color: white;
 }
 
+.buttonrow {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+}
+
 .buttonbox {
   margin: 50px 30px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
 }

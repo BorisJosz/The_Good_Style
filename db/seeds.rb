@@ -7,13 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'starting the seeds'
 
+ProductVariation.destroy_all
 TargetAudience.destroy_all
 Brand.destroy_all
 User.destroy_all
 Product.destroy_all
+Color.destroy_all
+Size.destroy_all
+ProductCategory.destroy_all
+
 
 # generate target_audiences
-puts 'target audience'
+puts 'target audiences'
 TargetAudience.create!(
   { gender: "men",
     target_photo:'https://farm1.staticflickr.com/700/23200390351_86fa303506_b.jpg',
@@ -57,6 +62,7 @@ brand = Brand.create!(
 
 
 # generate categories
+puts 'creating product categories'
 ProductCategory.create!(
 {
   category: "Jeans",
@@ -72,10 +78,68 @@ ProductCategory.create!(
   category: "Socks",
 })
 
+#generate sizes
+
+puts 'creating sizes'
+Size.create!(
+{
+  size: "XS",
+})
+
+Size.create!(
+{
+  size: "S",
+})
+
+Size.create!(
+{
+  size: "M",
+})
+
+Size.create!(
+{
+  size: "L",
+})
+
+Size.create!(
+{
+  size: "XL",
+})
+
+#generate colors
+puts 'creating colors'
+Color.create!(
+{
+  color: "red",
+})
+
+Color.create!(
+{
+  color: "blue",
+})
+
+Color.create!(
+{
+  color: "green",
+})
+
+Color.create!(
+{
+  color: "black",
+})
+
+Color.create!(
+{
+  color: "white",
+})
+
 
 # generate products
 puts 'creating products'
-Product.create!(
+
+products = []
+
+products << Product.create!(
   {
     target_audience: TargetAudience.all.sample,
     name: 'White blouse',
@@ -90,7 +154,7 @@ Product.create!(
     distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
-Product.create!(
+products <<  Product.create!(
   {
     target_audience: TargetAudience.all.sample,
     name: 'Comfy sweater',
@@ -105,7 +169,7 @@ Product.create!(
     distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
-Product.create!(
+products << Product.create!(
   {
     target_audience: TargetAudience.all.sample,
     name: 'Casual dress',
@@ -120,7 +184,7 @@ Product.create!(
     distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
-Product.create!(
+products << Product.create!(
   {
     target_audience: TargetAudience.all.sample,
     name: 'Simple & Sexy',
@@ -135,7 +199,7 @@ Product.create!(
     distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
-Product.create!(
+products << Product.create!(
   {
     target_audience: TargetAudience.all.sample,
     name: 'White ensemble',
@@ -150,7 +214,7 @@ Product.create!(
     distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
-Product.create!(
+products << Product.create!(
   {
     target_audience: TargetAudience.all.sample,
     name: 'Lovely pink-ish',
@@ -165,7 +229,7 @@ Product.create!(
     distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
-Product.create!(
+products << Product.create!(
   {
     target_audience: TargetAudience.all.sample,
     name: 'Colorful dress',
@@ -179,3 +243,21 @@ Product.create!(
     location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
     distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
+
+#generating product variations
+
+products.each do |product|
+  Color.all.each do |color|
+    Size.all.each do |size|
+    ProductVariation.create!(
+    {
+      product: product,
+      color: color,
+      size: size,
+    })
+  end
+end
+end
+
+puts 'creating product variations'
+
