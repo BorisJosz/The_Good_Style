@@ -45,15 +45,15 @@
   <div class="audience-container">
     <div class="row">
       <%  @target_audiences.each do |audience|  %>
-        <div class="col-xs-12 col-sm-4">
-          <%= link_to "/#{audience.gender}" do  %>
-            <div class = "card-audience" style="background-image: url( <%= audience.target_photo %> );">
-              <div class= "card-audience-text">
-              <h2> <%= audience.gender.capitalize %></h2>
-              </div>
-            </div>
-          <% end %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to "/#{audience.gender}" do  %>
+        <div class = "card-audience" style="background-image: url( <%= audience.target_photo %> );">
+          <div class= "card-audience-text">
+            <h2> <%= audience.gender.capitalize %></h2>
+          </div>
         </div>
+        <% end %>
+      </div>
       <% end %>
     </div>
   </div>
@@ -61,15 +61,59 @@
 
 
 
-<div class="sustainability-info">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, obcaecati? Quibusdam, pariatur placeat culpa optio officiis voluptas. Maiores earum animi officiis fuga, dolorum alias impedit quae illum quia cum, accusamus libero quod dolorem voluptatibus, quis natus nisi. Qui repellendus, ex ullam praesentium, accusantium doloribus laudantium deserunt vitae modi minus, adipisci nulla consequuntur deleniti incidunt pariatur ducimus eaque numquam dolore sequi.
-  Officiis nemo incidunt iste expedita illo. Quo placeat itaque, commodi tenetur temporibus quaerat aperiam quibusdam repellat voluptates sapiente dicta tempore id quia necessitatibus sit excepturi quas quisquam aut voluptate animi laboriosam laborum doloremque nulla! Delectus ex possimus, quaerat placeat quidem.
-  </p>
-  <div class="sustainable-icons">
-    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/117607-200.png') %>
-    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/430000-200.png') %>
-    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/1299961-200.png') %>
-    <%= image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/199783-200.png') %>
+<div class="sustainability-info" id="S2">
+  <div class="sustainability-info-container">
+    <a href="#S2"><h3>ABOUT US</h3></a>
+    <p>
+      We strive to bring forth eco-friendly designer labels, driven by our belief of bringing forth products that matter and pieces that last. By focusing on quality over quantity – and on timeless collections that are meant to be worn year-round – we stand firm in our belief that fashion should be neither fast nor disposable.
+    </p>
 
+    <p>
+      We are a young and passionate group of humans, designers and developers, and we truly believe that with your help we can change the world for the better. Join us and be the change that has the power to revolutionize an industry. Here goes step one.
+    </p>
+    <div class="row">
+      <div class="infobox">
+        <div class="subinfobox text-left">
+
+          <div class = "infodetail">
+            <div class="infodetailleft">
+              <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/117607-200.png" alt="cotton" style="width: 80px;">
+            </div>
+            <div class="infodetailright">
+              <p>Only organic cotton is used in the creation of products featured on this website, ensuring top quality softness and cuddliness!</p>
+            </div>
+          </div>
+
+          <div class = "infodetail">
+            <div class="infodetailleft">
+              <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/430000-200.png" alt="sewing machine" style="width: 80px;">
+            </div>
+            <div class="infodetailright">
+              <p>All our articles were created by small designers in the hopes of increasing their visibility on the marketplace.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="subinfobox text-left">
+          <div class = "infodetail">
+            <div class="infodetailleft">
+              <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/1299961-200.png" alt="transport" style="width: 80px;">
+            </div>
+
+            <div class="infodetailright">
+              <p>All of our products are created in Europe, in order to reduce the impact of heavy transporting activities on the environment.</p>
+            </div>
+          </div>
+          <div class = "infodetail">
+            <div class="infodetailleft">
+              <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/199783-200.png" alt="people" style="width: 80px;">
+            </div>
+            <div class="infodetailright">
+              <p>All participants in the design and creation of an article received at the very least the minimum legal wage applicable in their respective countries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
