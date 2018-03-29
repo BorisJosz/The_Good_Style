@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :products, only: [:show]
+  resources :products, only: [:show] do
+    post "add_item", to: "shopping_carts#add_item"
+  end
+
   get "women", to: "target_audiences#women"
   get "men", to: "target_audiences#men"
   get "kids", to: "target_audiences#kids"
