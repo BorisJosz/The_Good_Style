@@ -46,6 +46,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap-select-rails (1.12.4)
     builder (3.2.3)
     byebug (10.0.1)
     coderay (1.1.2)
@@ -188,6 +189,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3)
+  bootstrap-select-rails
   devise
   figaro
   font-awesome-sass (~> 5.0.6)
