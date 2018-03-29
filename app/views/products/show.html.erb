@@ -21,11 +21,18 @@
               </h5>
 
 <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
+
   <%= f.input :size, collection: @product.sizes.uniq,value_method: :id,placeholder: 'pick your size',label_method: :size, label:false  %>
   <%= f.input :color, collection: @product.colors.uniq, value_method: :id,label_method: :color %>
 
 
 
+
+
+
+ <% unless current_user.nil? %>
+ <%= link_to "shoopping cart ", shopping_cart_path(current_user.current_shopping_cart) %>
+<% end %>
 
             </div>
             <div class="select">
