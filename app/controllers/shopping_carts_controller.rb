@@ -1,7 +1,9 @@
 class ShoppingCartsController < ApplicationController
+
   def new
     @shopping_cart_item = ShoppingCartItem.new
   end
+
   def add_item
     # controller post receiving wish from user to add item to shopping cart
     # 1 Find Item from Route info
@@ -19,11 +21,14 @@ class ShoppingCartsController < ApplicationController
     # 6 render js code so we dont change page and can yet update
     format.js
   end
+
   def create
     @shopping_cart_item = ShoppingCartItem.new
     @shopping_cart_item.save
   end
+
   def set_variations
        params.require(:product_variation).permit(:size, :color)
   end
+
 end
