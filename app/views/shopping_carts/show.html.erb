@@ -4,8 +4,10 @@
 <p> ***************** </p>
 
 <p> Aline stuff</p>
-<% @shoppingCart.shopping_cart_items.each do |item| %>
-<%= item.quantity %>
-<%= item.product_variation.product.name %>
 
+<% @shoppingCart.shopping_cart_items.each do |item| %>
+<p><%= item.quantity %></p>
+<p><%= item.product_variation.product.name %></p>
+<p><%= item.product_variation.size.size %></p>
+<p><%= item.product_variation.color.color %></p>
 <% end %>

@@ -32,7 +32,7 @@ class ShoppingCartsController < ApplicationController
   end
 
   def show
-    @shoppingCart = ShoppingCart.where(user: current_user, status: false)[0]
+    @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
   end
 
 end
