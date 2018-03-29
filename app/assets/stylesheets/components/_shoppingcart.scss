@@ -1,4 +1,35 @@
+.row {
+    display: flex;
+}
+
 .shopping-cart-column {
+    align-items: center;
+    height: 450px;
+    box-sizing: border-box;
     display: inline-block;
-    
+    font-size: 12px;
+    margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    vertical-align: top;
+    width: calc(100% - 370px);
+}
+
+.order-details-summary {
+    display: inline-block;
+    align-items: center;
+    height: 450px;
+    width: 345px;
+    margin-left: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    border-bottom: 1px solid #e7e7e7
+}
+
+.flex-selection {
+    display: flex;
+    align-items: center;
 }
