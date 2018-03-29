@@ -21,10 +21,9 @@
               </h5>
 
 <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
-  <%= f.input :size, collection: @product.sizes,value_method: :id,label_method: :size %>
-  <%= f.input :color, collection: @product.colors, value_method: :id,label_method: :color %>
-  <%= f.button :submit %>
-<% end %>
+  <%= f.input :size, collection: @product.sizes.uniq,value_method: :id,placeholder: 'pick your size',label_method: :size, label:false  %>
+  <%= f.input :color, collection: @product.colors.uniq, value_method: :id,label_method: :color %>
+
 
 
 
@@ -37,8 +36,13 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class = "buttonbox"><%= link_to 'SHOP MORE', "/#{@product.target_audience.gender}", class:"btn-standard"%></div>
+    <div class="row ">
+      <div class="buttonrow">
+        <%= link_to 'SHOP MORE', "/#{@product.target_audience.gender}", class:"btn btn-default btn-standard"%>
+           &nbsp;&nbsp;&nbsp;
+        <%= f.button :submit, "ADD TO CART", class: "btn-standard" %>
+        <% end %>
+        </div>
     </div>
 
     <div class="row">
