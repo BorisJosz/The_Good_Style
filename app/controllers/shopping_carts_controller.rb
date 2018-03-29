@@ -23,10 +23,6 @@ class ShoppingCartsController < ApplicationController
 
   end
 
-  def quantity
-
-  end
-
   def create
     @shopping_cart_item = ShoppingCartItem.new
     @shopping_cart_item.save
@@ -37,7 +33,21 @@ class ShoppingCartsController < ApplicationController
   end
 
   def show
+    @shopping_cart_items = ShoppingCartItem.all
     @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
+  end
+
+  def quantity
+    @shopping_cart_item = ShoppingCartItem.find(set_shopping_cart_items[:id])
+    @shopping_cart_item.quantity = set_shopping_cart_items[:quantity]
+    @shopping_cart_item.save
+     @shopping_cart_items = ShoppingCartItem.all
+    @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
+    render :show
+  end
+
+  def set_shopping_cart_items
+       params.require(:shopping_cart_item).permit(:quantity, :id)
   end
 
 end

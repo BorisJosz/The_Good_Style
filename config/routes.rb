@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :brands, only: [:index, :show]
 
   resources :shopping_carts, only: [:show]
+    patch "quantity", to: "shopping_carts#quantity"
 
   devise_for :users
   root to: 'pages#home'

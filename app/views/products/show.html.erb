@@ -17,7 +17,7 @@
           <div class="selectors">
             <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
             <%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %>
-            <%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false %>
+            <%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false%>
           </div>
         </div>
       </div>

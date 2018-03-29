@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="card row">
         <div class="col-xs-12 col-md-6 shopping-cart-column">
@@ -13,10 +14,14 @@
                 <p><%= item.product_variation.color.color %></p>
               </div>
               <div>
-               <p><%= item.quantity %></p>
+               <%= simple_form_for item, url: quantity_path do |f| %>
+<%= f.input :quantity %>
+<%= f.input :id, value: item.id, as: :hidden %></p>
+<%= f.button :submit, "change quantity"  %>
+<% end %>
               </div>
               <div>
-                <p><%= item.product_variation.product.price %>€</p>
+                <p><%= item.calculate_total %> €</p>
               </div>
             </div>
               <% end %>
@@ -29,3 +34,4 @@
         </div>
     </div>
 </div>
+
