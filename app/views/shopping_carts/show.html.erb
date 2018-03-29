@@ -1,9 +1,17 @@
-
-<p> Chris stuff area </p>
-
-<p> ***************** </p>
-
-<p> Aline stuff area</p>
+<div class="container">
+    <div class="card">
+        <div class="shopping-cart-column">
+            <h3> Your Selections </h3>
+            <p> Clothes' images, size + quantity button </p>
+        </div>
+        <div class="order-details-summary">
+            <h3> Order Summary </h3>
+            <p> total sum </p>
+            <p> checkout button </p>
+        </div>
+    </div>
+</div>
+<p> Aline stuff</p>
 <% @shoppingCart.shopping_cart_items.each do |item| %>
 <%= item.quantity %>
 <%= item.product_variation.product.name %>
