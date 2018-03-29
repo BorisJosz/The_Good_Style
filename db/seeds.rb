@@ -248,13 +248,15 @@ products << Product.create!(
 
 products.each do |product|
   Color.all.each do |color|
+    Size.all.each do |size|
     ProductVariation.create!(
     {
       product: product,
       color: color,
-      size: Size.all.sample,
+      size: size,
     })
   end
+end
 end
 
 puts 'creating product variations'
