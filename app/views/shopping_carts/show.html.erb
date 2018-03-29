@@ -6,9 +6,18 @@
 <p> Aline stuff</p>
 
 <% @shoppingCart.shopping_cart_items.each do |item| %>
-<p><%= item.quantity %></p>
 <p><%= item.product_variation.product.name %></p>
 <p><%= item.product_variation.size.size %></p>
 <p><%= item.product_variation.color.color %></p>
-<p><%= item.product_variation.product.price %> €</p>
+<p><%= item.calculate_total %> €</p>
+<p>
+<%= simple_form_for item, url: quantity_path do |f| %>
+<%= f.input :quantity %>
+<%= f.input :id, value: item.id, as: :hidden %></p>
+<%= f.button :submit, "change quantity"  %>
 <% end %>
+
+
+<% end %>
+
+
