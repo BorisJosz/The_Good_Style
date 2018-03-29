@@ -31,4 +31,8 @@ class ShoppingCartsController < ApplicationController
        params.require(:product_variation).permit(:size, :color)
   end
 
+  def show
+    @shoppingCart = ShoppingCart.where(user: current_user, status: false)[0]
+  end
+
 end

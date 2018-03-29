@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   resources :products, only: [:show] do
     post "add_item", to: "shopping_carts#add_item"
   end
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
   get "men", to: "target_audiences#men"
   get "kids", to: "target_audiences#kids"
   resources :brands, only: [:index, :show]
+
+  resources :shopping_carts, only: [:show]
 
   devise_for :users
   root to: 'pages#home'
