@@ -31,12 +31,10 @@
     </div>
     <div class="order-summary text-center">
       <h3> Order Summary </h3>
-      <%= form_tag shopping_cart_payments_path(@shoppingCart) do %>
-      <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
-      if you buy it will cost you <%= humanized_money_with_symbol(@shoppingCart.total) %>
-      <br>
-      <br>
-      <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
+      <%= form_tag new_shopping_cart_payment_path(@shoppingCart), method: :get do %>
+  <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
+  if you buy it will cost you <%= @shoppingCart.total %>
+  <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
       <% end %>
     </div>
   </div>

@@ -1,4 +1,7 @@
-<h1>Thanks for confirming your order <%= @shopping_cart.id %></h1>
+<div class="container">
+<div class="row paypay text-center">
+<h1>Now it's time to pay</h1>
+
 <%= form_tag new_shopping_cart_payment_path(@shopping_cart) do %>
   <article>
     <label class="amount">
@@ -8,13 +11,13 @@
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Teddy"
+    data-name="The Good Style"
     data-email="<%= current_user.email %>"
-    data-description="Teddy <%= @shopping_cart.id %>"
+    data-description="Sustainable clothing <%= @shopping_cart.id %>"
     data-amount="<%= @shopping_cart.amount_cents %>"
     data-currency="<%= @shopping_cart.amount.currency %>"></script>
 <% end %>
+</div>
+</div>
 
-
-<i class="far fa-frown"></i>
 

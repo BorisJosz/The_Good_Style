@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
 
   resources :shopping_carts, only: [:show, :create] do
-    resources :payments, only: [:new, :create]
+      get "thanks", to: "payments#thanks"
+
+    resources :payments, only: [:new, :create, :thanks] do
+  end
   end
 
   resources :products, only: [:index, :show] do
     post "add_item", to: "shopping_carts#add_item"
   end
-
+  post "/shopping_carts/:shopping_cart_id/payments/new", to: "payments#create"
   get "women", to: "target_audiences#women"
   get "men", to: "target_audiences#men"
   get "kids", to: "target_audiences#kids"
