@@ -1,18 +1,23 @@
 
 <div class="container">
-  <div class="card row">
-    <div class="col-xs-12 col-md-6 shopping-cart-column">
-      <h3> Your Selections </h3>
-      <% @shoppingCart.shopping_cart_items.each do |item| %>
-      <div class="flex-selection">
-        <div>
-          <img src="<%=item.product_variation.product.image%>" width=100 height=100>
+    <div class="card row">
+        <div class="col-xs-12 col-md-6 shopping-cart-column">
+            <h3> Your Selections </h3>
+            <% @shoppingCart.shopping_cart_items.each do |item| %>
+            <div class="flex-selection">
+              <div>
+                <img src="<%=item.product_variation.product.image%>" width=100 height=100>
+              </div>
+         <
+              <div class="clothe-info">
+                <p><%= item.product_variation.product.name %></p>
+                <p><%= item.product_variation.size.size %></p>
+                <p><%= item.product_variation.color.color %></p>
+              </div>
+              
+  
         </div>
-        <div>
-          <p><%= item.product_variation.product.name %></p>
-          <p><%= item.product_variation.size.size %></p>
-          <p><%= item.product_variation.color.color %></p>
-        </div>
+       
         <div>
          <%= simple_form_for item, url: quantity_path do |f| %>
          <%= f.input :quantity %>
