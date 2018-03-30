@@ -28,24 +28,14 @@
     </div>
     <div class="col-order-summary">
       <h3> Order Summary </h3>
-      <p> Total Sum:</p>
-      <p> --Mucho €--</p>
-      <button type="button" class="btn btn-standard">Checkout</button>
+      <%= form_tag shopping_cart_payments_path(@shoppingCart) do %>
+      <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
+      if you buy it will cost you <%= humanized_money_with_symbol(@shoppingCart.total) %>
+      <br>
+      <br>
+      <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
+      <% end %>
     </div>
   </div>
-  <div class="col-xs-12 col-md-6 order-details-summary">
-    <%= form_tag shopping_cart_payments_path(@shoppingCart) do %>
-  <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
-  if you buy it will cost you <%= @shoppingCart.total %>
-  <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
-<% end %>
-
-  </div>
 </div>
-
-<h1>Order</h1>
-<ul>
-  <li>Status: <%= @shoppingCart.status %></li>
-  <li>Amount: <%= humanized_money_with_symbol(@shoppingCart.total) %></li>
-<ul>
 
