@@ -8,7 +8,10 @@
   width: 50vw;
   position: center;
   h2 {
-    text-align: center;
+    font-size: lighter;
+    color: #155061;
+  }
+  p {
     font-size: lighter;
     color: #155061;
   }
@@ -17,5 +20,10 @@
 .form-options {
   margin-top : 8px;
   margin-bottom: 8px;
+}
+
+.fa-ellipsis-v {
+  color: #F0B917;
+  margin-right: 5px;
 }
 
