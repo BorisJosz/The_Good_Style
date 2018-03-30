@@ -1,51 +1,42 @@
-
 <div class="container-shopping-cart">
   <div class="grid-shoppingcart">
     <div class="selection">
       <h3> Your Selections </h3>
+
+
       <% @shoppingCart.shopping_cart_items.each do |item| %>
-        <div class="row-shoppping-cart-items">
-          <div class="col-shopping-cart-image col-xs-4">
-            <img src="<%=item.product_variation.product.image%>" width=100 height=100>
+        <div class="row-shopping-cart-items">
+
+          <div class="shopping-cart-imagebox">
+          <div class="shopping-cart-image" style="background-image:url(<%=item.product_variation.product.image%>); " alt = "product">
           </div>
-          <div class="col-shopping-cart-info col-xs-3">
+          </div>
+          <div class="shopping-cart-info">
             <p><%= item.product_variation.product.name %></p>
             <p><%= item.product_variation.size.size %></p>
             <p><%= item.product_variation.color.color %></p>
           </div>
-          <div class="col-shopping-cart-quantity col-xs-3">
+          <div class="shopping-cart-quantity">
             <%= simple_form_for item, url: quantity_path do |f| %>
             <%= f.input :quantity %>
             <%= f.input :id, value: item.id, as: :hidden %></p>
             <%= f.button :submit, "change quantity"  %>
             <% end %>
           </div>
-          <div class="col-shopping-cart-price col-xs-2">
+          <div class="shopping-cart-price">
             <p><%= item.calculate_total %> €</p>
           </div>
         </div>
       <% end %>
     </div>
-    <div class="col-order-summary">
+    <div class="order-summary text-center">
       <h3> Order Summary </h3>
-      <p> Total Sum:</p>
-      <p> --Mucho €--</p>
-      <button type="button" class="btn btn-standard">Checkout</button>
-    </div>
-  </div>
-  <div class="col-xs-12 col-md-6 order-details-summary">
-    <%= form_tag new_shopping_cart_payment_path(@shoppingCart), method: :get do %>
+      <%= form_tag new_shopping_cart_payment_path(@shoppingCart), method: :get do %>
   <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
   if you buy it will cost you <%= @shoppingCart.total %>
   <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
-<% end %>
-
+      <% end %>
+    </div>
   </div>
 </div>
-
-<h1>Order</h1>
-<ul>
-  <li>Status: <%= @shoppingCart.status %></li>
-  <li>Amount: <%= humanized_money_with_symbol(@shoppingCart.total) %></li>
-<ul>
 
