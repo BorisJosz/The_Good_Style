@@ -4,10 +4,19 @@
   margin-bottom: 30px;
 }
 
+.card-image-box {
+  height: 350px;
+}
+
 .card-image-container {
   height: 350px;
   background-size: cover;
   background-position: 50% 50%;
+  transition: all .2s ease-in-out;
+}
+
+.card-image-container:hover {
+  transform: scale(1.03);
 }
 
 .card-text h3 {
@@ -26,3 +35,7 @@
   background-color: white;
   padding-bottom: 15px;
 }
+
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }

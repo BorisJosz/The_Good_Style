@@ -9,11 +9,13 @@
       <%= link_to product_path(product) do %>
         <div class="col-xs-12 col-sm-4 col-md-3">
           <div class = "card text-center">
+
             <div class="card-image-container" style="background-image:url(<%= product.image %>); " alt="cart">
-            </div>
+
+          </div>
             <div class="card-text">
               <h3><%= product.name %></h3>
-              <h3><%= product.name %>  by <%= product.brand.name %></h3>
+              <h4>by <%= product.brand.name %></h4>
               <h4><%= humanized_money_with_symbol(product.price) %></h4>
 
             </div>

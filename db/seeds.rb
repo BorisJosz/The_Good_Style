@@ -21,19 +21,19 @@ ProductCategory.destroy_all
 puts 'target audiences'
 TargetAudience.create!(
   { gender: "men",
-    target_photo:'https://farm1.staticflickr.com/700/23200390351_86fa303506_b.jpg',
+    target_photo:'http://res.cloudinary.com/megednazednav/image/upload/v1522441046/men.png',
 }
 )
 
 TargetAudience.create!(
   { gender: "women",
-  target_photo: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
+  target_photo: 'http://res.cloudinary.com/megednazednav/image/upload/v1522441045/women.png',
 }
 )
 
 TargetAudience.create!(
   {gender: "kids",
-  target_photo: "https://farm2.staticflickr.com/1121/3165569990_bd28a9866a_b.jpg",
+  target_photo: "http://res.cloudinary.com/megednazednav/image/upload/v1522441049/kids.png",
 }
 )
 
@@ -44,7 +44,7 @@ user = User.create!(
     address: 'White House, US of A',
     telephone: '911',
     email: 'John.Smith@gmail.com',
-    photo: 'https://pbs.twimg.com/profile_images/927353793800388609/JqU3njSZ_400x400.jpg',
+    photo: 'http://d3trabu2dfbdfb.cloudfront.net/8/9/8916142_300x300_1.jpeg',
     password: '123456',
     password_confirmation: '123456'
 })
