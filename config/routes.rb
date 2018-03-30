@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :products, only: [:show] do
+  resources :products, only: [:index, :show] do
     post "add_item", to: "shopping_carts#add_item"
   end
 

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div id="products">
+        <% @products.each do |p| %>
+          <h4><%= p.name %></h4>
+          <%= image_tag(p.image) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
