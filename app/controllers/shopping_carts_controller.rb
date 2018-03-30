@@ -43,11 +43,11 @@ class ShoppingCartsController < ApplicationController
     @shopping_cart_item.save
      @shopping_cart_items = ShoppingCartItem.all
     @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
-    render :show
+    redirect_to shopping_cart_path(@shoppingCart)
   end
 
   def set_shopping_cart_items
-       params.require(:shopping_cart_item).permit(:quantity, :id)
+    params.require(:shopping_cart_item).permit(:quantity, :id)
   end
 
 end
