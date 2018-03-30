@@ -12,8 +12,10 @@
             <div class="card-image-container" style="background-image:url(<%= product.image %>); " alt="cart">
             </div>
             <div class="card-text">
+              <h3><%= product.name %></h3>
               <h3><%= product.name %>  by <%= product.brand.name %></h3>
-              <h4><%= product.price %>€</h4>
+              <h4><%= humanized_money_with_symbol(product.price) %></h4>
+
             </div>
           </div>
         </div>

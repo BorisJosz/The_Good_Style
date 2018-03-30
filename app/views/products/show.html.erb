@@ -11,7 +11,8 @@
       <div class="col-xs-12 col-sm-7 show-page text-left">
         <div class="textbox">
           <h2><i class="fas fa-ellipsis-v"></i> <%= @product.name%></h2>
-          <h3>€ <%= @product.price%></h3>
+
+          <h3> <%= humanized_money_with_symbol(@product.price)%></h3>
           <br>
           <p><%= @product.description%></p>
           <div class="selectors">
