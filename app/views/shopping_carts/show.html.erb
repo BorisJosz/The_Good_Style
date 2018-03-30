@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="col-xs-12 col-md-6 order-details-summary">
-    <%= form_tag shopping_cart_payments_path(@shoppingCart) do %>
+    <%= form_tag new_shopping_cart_payment_path(@shoppingCart), method: :get do %>
   <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
   if you buy it will cost you <%= @shoppingCart.total %>
   <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
