@@ -1,30 +1,31 @@
-<div class="container">
-  <div class="card row-shoppingcart">
-    <div class="col-xs-12 col-md-6 shopping-cart-column">
+<div class="container-shopping-cart">
+  <div class="grid-shoppingcart">
+    <div class="selection">
       <h3> Your Selections </h3>
       <% @shoppingCart.shopping_cart_items.each do |item| %>
-        <div class="flex-selection">
-          <div>
+        <div class="row-shoppping-cart-items">
+          <div class="col-shopping-cart-image col-xs-4">
             <img src="<%=item.product_variation.product.image%>" width=100 height=100>
           </div>
-        <div class="clothe-info">
-          <p><%= item.product_variation.product.name %></p>
-          <p><%= item.product_variation.size.size %></p>
-          <p><%= item.product_variation.color.color %></p>
-        </div>
-        <div>
-          <%= simple_form_for item, url: quantity_path do |f| %>
-          <%= f.input :quantity %>
-          <%= f.input :id, value: item.id, as: :hidden %></p>
-          <%= f.button :submit, "change quantity"  %>
-          <% end %>
-        </div>
-        <div>
-         <p><%= item.calculate_total %> €</p>
+          <div class="col-shopping-cart-info col-xs-3">
+            <p><%= item.product_variation.product.name %></p>
+            <p><%= item.product_variation.size.size %></p>
+            <p><%= item.product_variation.color.color %></p>
+          </div>
+          <div class="col-shopping-cart-quantity col-xs-3">
+            <%= simple_form_for item, url: quantity_path do |f| %>
+            <%= f.input :quantity %>
+            <%= f.input :id, value: item.id, as: :hidden %></p>
+            <%= f.button :submit, "change quantity"  %>
+            <% end %>
+          </div>
+          <div class="col-shopping-cart-price col-xs-2">
+            <p><%= item.calculate_total %> €</p>
+          </div>
         </div>
       <% end %>
     </div>
-    <div class="col-xs-12 col-md-6 order-details-summary">
+    <div class="col-order-summary">
       <h3> Order Summary </h3>
       <p> Total Sum:</p>
       <p> --Mucho €--</p>
