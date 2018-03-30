@@ -8,7 +8,6 @@
           <div class="col-shopping-cart-image col-xs-4">
             <img src="<%=item.product_variation.product.image%>" width=100 height=100>
           </div>
-
           <div class="col-shopping-cart-info col-xs-3">
             <p><%= item.product_variation.product.name %></p>
             <p><%= item.product_variation.size.size %></p>
@@ -33,7 +32,7 @@
       <p> --Mucho €--</p>
       <button type="button" class="btn btn-standard">Checkout</button>
     </div>
-
+  </div>
   <div class="col-xs-12 col-md-6 order-details-summary">
     <%= form_tag shopping_cart_payments_path(@shoppingCart) do %>
   <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
