@@ -1,0 +1,20 @@
+<h1>Thanks for confirming your order <%= @shopping_cart.id %></h1>
+<%= form_tag new_shopping_cart_payment_path(@shopping_cart) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: <%= humanized_money_with_symbol(@shopping_cart.total) %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Teddy"
+    data-email="<%= current_user.email %>"
+    data-description="Teddy <%= @shopping_cart.id %>"
+    data-amount="<%= @shopping_cart.amount_cents %>"
+    data-currency="<%= @shopping_cart.amount.currency %>"></script>
+<% end %>
+
+
+<i class="far fa-frown"></i>
+

@@ -8,16 +8,16 @@
               <div>
                 <img src="<%=item.product_variation.product.image%>" width=100 height=100>
               </div>
-         <
+
               <div class="clothe-info">
                 <p><%= item.product_variation.product.name %></p>
                 <p><%= item.product_variation.size.size %></p>
                 <p><%= item.product_variation.color.color %></p>
               </div>
-              
-  
+
+
         </div>
-       
+
         <div>
          <%= simple_form_for item, url: quantity_path do |f| %>
          <%= f.input :quantity %>
@@ -32,11 +32,19 @@
     <% end %>
   </div>
   <div class="col-xs-12 col-md-6 order-details-summary">
-    <h3> Order Summary </h3>
-    <p> Total Sum:</p>
-    <p> --Mucho €--</p>
-    <button type="button" class="btn btn-standard">Checkout</button>
+    <%= form_tag shopping_cart_payments_path(@shoppingCart) do %>
+  <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
+  if you buy it will cost you <%= @shoppingCart.total %>
+  <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
+<% end %>
+
   </div>
 </div>
 </div>
+
+<h1>Order</h1>
+<ul>
+  <li>Status: <%= @shoppingCart.status %></li>
+  <li>Amount: <%= humanized_money_with_symbol(@shoppingCart.total) %></li>
+<ul>
 
