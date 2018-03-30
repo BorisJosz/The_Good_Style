@@ -1,3 +1,4 @@
+
 <div class="container-shopping-cart">
   <div class="grid-shoppingcart">
     <div class="selection">
@@ -7,6 +8,7 @@
           <div class="col-shopping-cart-image col-xs-4">
             <img src="<%=item.product_variation.product.image%>" width=100 height=100>
           </div>
+
           <div class="col-shopping-cart-info col-xs-3">
             <p><%= item.product_variation.product.name %></p>
             <p><%= item.product_variation.size.size %></p>
@@ -31,6 +33,20 @@
       <p> --Mucho €--</p>
       <button type="button" class="btn btn-standard">Checkout</button>
     </div>
+
+  <div class="col-xs-12 col-md-6 order-details-summary">
+    <%= form_tag shopping_cart_payments_path(@shoppingCart) do %>
+  <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
+  if you buy it will cost you <%= @shoppingCart.total %>
+  <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
+<% end %>
+
   </div>
 </div>
+
+<h1>Order</h1>
+<ul>
+  <li>Status: <%= @shoppingCart.status %></li>
+  <li>Amount: <%= humanized_money_with_symbol(@shoppingCart.total) %></li>
+<ul>
 

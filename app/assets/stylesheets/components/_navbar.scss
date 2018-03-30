@@ -40,7 +40,7 @@
 /* Navbar link */
 .navbar-wagon-link {
   color: white;
-  font-size: 14px;
+  font-size: 18px;
 }
 .navbar-wagon-link:hover {
   color: #da552f;
@@ -76,4 +76,20 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.search-bar {
+  height: 30px !important;
+  width: 200px;
+  &:hover {
+    background-color: white;
+  }
+}
+.search-bar::placeholder {
+  color: #155061;
+}
+
+.fa-search {
+  color: white;
+  margin-right: 10px;
 }
