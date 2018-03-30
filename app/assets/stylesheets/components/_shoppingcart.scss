@@ -1,41 +1,47 @@
-.row-shoppingcart {
+.container-shopping-cart {
     display: flex;
 }
 
-.shopping-cart-column {
-    align-items: center;
-    height: 450px;
-    box-sizing: border-box;
-    display: inline-block;
-    font-size: 12px;
-    margin-right: 20px;
-    padding-left: 0;
-    padding-right: 0;
-    position: relative;
-    vertical-align: top;
-    width: calc(100% - 370px);
-}
+.grid-shoppingcart {
+    display: grid;
+    background-color: white;
+    height: auto;
+    width: 100000px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    grid-template-columns: 33% 25% 25% 17%;
+    grid-template-rows: auto;
+  }
 
-.order-details-summary {
-    display: inline-block;
-    align-items: center;
-    height: 450px;
-    width: 345px;
-    margin-left: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-align: left;
-    border-bottom: 1px solid #e7e7e7
-}
-
-.flex-selection {
+.row-shopping-cart-items {
     display: flex;
-    align-items: center;
+
+}
+.selection{
+    display: flex;
+    flex-direction: column;
 }
 
-.clothe-info {
-    flex: auto;
-    border: 1px;
-    margin-left: 5px;
+
+.col-shopping-cart-image {
+    display: flex,
+
+}
+
+.col-shopping-cart-info {
+    display: flex;
+}
+
+.col-shopping-cart-quantity {
+    display: flex;
+}
+
+.col-shopping-cart-price {
+    display: flex;
+}
+
+.col-order-summary {
+    display: grid;
+    top: 0;
+    margin-left: 40px;
 }
