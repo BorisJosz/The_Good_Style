@@ -44,6 +44,7 @@ user = User.create!(
     address: 'White House, US of A',
     telephone: '911',
     email: 'John.Smith@gmail.com',
+    photo: 'https://pbs.twimg.com/profile_images/927353793800388609/JqU3njSZ_400x400.jpg',
     password: '123456',
     password_confirmation: '123456'
 })

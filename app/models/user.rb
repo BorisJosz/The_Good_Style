@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  #cloudinary upload
+  mount_uploader :photo, PhotoUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :brands

@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="card row">
         <div class="col-xs-12 col-md-6 shopping-cart-column">
@@ -7,25 +8,35 @@
               <div>
                 <img src="<%=item.product_variation.product.image%>" width=100 height=100>
               </div>
+         <
               <div class="clothe-info">
                 <p><%= item.product_variation.product.name %></p>
                 <p><%= item.product_variation.size.size %></p>
                 <p><%= item.product_variation.color.color %></p>
               </div>
-              <div>
-               <p><%= item.quantity %></p>
-              </div>
-              <div>
-                <p><%= item.product_variation.product.price %>€</p>
-              </div>
-            </div>
-              <% end %>
+              
+  
         </div>
-        <div class="col-xs-12 col-md-6 order-details-summary">
-            <h3> Order Summary </h3>
-            <p> Total Sum:</p>
-            <p> --Mucho €--</p>
-            <button type="button" class="btn btn-standard">Checkout</button>
-        </div>
+       
+        <div>
+         <%= simple_form_for item, url: quantity_path do |f| %>
+         <%= f.input :quantity %>
+         <%= f.input :id, value: item.id, as: :hidden %></p>
+         <%= f.button :submit, "change quantity"  %>
+         <% end %>
+       </div>
+       <div>
+        <p><%= item.calculate_total %> €</p>
+      </div>
     </div>
+    <% end %>
+  </div>
+  <div class="col-xs-12 col-md-6 order-details-summary">
+    <h3> Order Summary </h3>
+    <p> Total Sum:</p>
+    <p> --Mucho €--</p>
+    <button type="button" class="btn btn-standard">Checkout</button>
+  </div>
 </div>
+</div>
+

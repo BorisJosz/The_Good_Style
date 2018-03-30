@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328092722) do
+ActiveRecord::Schema.define(version: 20180330070303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20180328092722) do
   end
 
   create_table "shopping_cart_items", force: :cascade do |t|
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.boolean "shipping_status"
     t.bigint "shopping_cart_id"
     t.bigint "product_variation_id"
@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(version: 20180328092722) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
