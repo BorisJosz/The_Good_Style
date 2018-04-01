@@ -7,14 +7,15 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <% if user_signed_in? %>
-
-    <!-- Links when logged in -->
     <!-- search bar -->
     <i class="fas fa-search"></i>
     <%= form_tag products_path, method: :get do %>
     <%= text_field_tag :query, params[:query], class: "form-control search-bar", placeholder: "Search..." %>
     <% end %>
+
+    <% if user_signed_in? %>
+
+    <!-- Links when logged in -->
 
     <a href="<%= shopping_cart_path(current_user.current_shopping_cart) %>", class="navbar-wagon-item navbar-wagon-link">
       <i class="fas fa-shopping-cart"></i>
