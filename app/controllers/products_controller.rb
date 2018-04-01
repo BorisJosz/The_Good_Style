@@ -7,7 +7,8 @@ class ProductsController < ApplicationController
 
   def index
     if params[:query].present?
-      @products = Product.where("name ILIKE ?", "%#{params[:query]}%")
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @products = Product.where(sql_query, query: "%#{params[:query]}%")
     else
       @products = Product.all
     end

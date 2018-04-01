@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  #mail
+  after_create :send_welcome_email
   #cloudinary upload
   mount_uploader :photo, PhotoUploader
   # Include default devise modules. Others available are:
@@ -15,6 +17,13 @@ class User < ApplicationRecord
     shoppingCart = ShoppingCart.create(user: self, status: false)
    end
   return shoppingCart
-
   end
+
+
+  private
+
+   def send_welcome_email
+    UserMailer.welcome(self).deliver_now
+  end
+
 end
