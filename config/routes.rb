@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show] do
     post "add_item", to: "shopping_carts#add_item"
+
   end
   post "/shopping_carts/:shopping_cart_id/payments/new", to: "payments#create"
   get "women", to: "target_audiences#women"
@@ -16,8 +17,10 @@ Rails.application.routes.draw do
   get "kids", to: "target_audiences#kids"
   resources :brands, only: [:index, :show]
 
-  resources :shopping_carts, only: [:show, :create, :delete]
+  resources :shopping_carts, only: [:show, :create]
     patch "quantity", to: "shopping_carts#quantity"
+
+  resources :shopping_cart_items, only: [:destroy]
 
   devise_for :users
   root to: 'pages#home'
