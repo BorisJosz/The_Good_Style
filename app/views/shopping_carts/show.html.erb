@@ -1,11 +1,13 @@
 <div class="container-shopping-cart">
-  <div class="grid-shoppingcart">
+  <div class="main-shoppingcart">
+
     <div class="selection">
-      <h3> Your Selections </h3>
 
-
+        <div class="row-shopping-cart">
+        <h3> Your selection </h3>
       <% @shoppingCart.shopping_cart_items.each do |item| %>
-        <div class="row-shopping-cart-items">
+
+        <div class="shopping-cart-items col-xs-12 col-sm-12">
 
           <div class="shopping-cart-imagebox">
           <div class="shopping-cart-image" style="background-image:url(<%=item.product_variation.product.image%>); " alt = "product">
@@ -18,25 +20,49 @@
           </div>
           <div class="shopping-cart-quantity">
             <%= simple_form_for item, url: quantity_path do |f| %>
-            <%= f.input :quantity %>
+            <%= f.input :quantity, input_html: { class: "quant-form", "data-price": item.product_variation.product.price  } %>
             <%= f.input :id, value: item.id, as: :hidden %></p>
-            <%= f.button :submit, "change quantity"  %>
             <% end %>
           </div>
-          <div class="shopping-cart-price">
-            <p><%= item.calculate_total %> €</p>
+          <div class="shop-price">
+            <div class="shopping-cart-price">
+              <p><%= item.product_variation.product.price %> €</p>
+            </div>
+            <div class="shopping-cart-price-quantity">
+              <p><%= item.calculate_total %> €</p>
+            </div>
           </div>
+
         </div>
       <% end %>
+      </div>
+
     </div>
-    <div class="order-summary text-center">
+
+    <div class="row">
+    <div class="order-summary col-xs-12 col-sm-6">
       <h3> Order Summary </h3>
       <%= form_tag new_shopping_cart_payment_path(@shoppingCart), method: :get do %>
   <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
-  if you buy it will cost you <%= @shoppingCart.total %>
+  if you buy it will cost you <%= @shoppingCart.total %> €
   <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
       <% end %>
     </div>
+    </div>
   </div>
 </div>
+
+<script>
+  let inputs_quant =  document.getElementsByClassName('quant-form');
+  console.log(inputs_quant);
+  for(let i = 0; i < inputs_quant.length; i++){
+    console.log("hey i m called");
+
+  inputs_quant[i].addEventListener('change', function(e){
+    e.preventDefault();
+      let div_form = e.currentTarget.parentElement.parentElement;
+      div_form.submit();
+   });
+}
+</script>
 
