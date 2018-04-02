@@ -38,10 +38,6 @@ class ShoppingCartsController < ApplicationController
     @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
   end
 
-  def destroy
-    @shopping_cart_item = ShoppingCartItem.find(params[:id])
-    @shopping_cart_item.destroy
-  end
 
   def quantity
     @shopping_cart_item = ShoppingCartItem.find(set_shopping_cart_items[:id])

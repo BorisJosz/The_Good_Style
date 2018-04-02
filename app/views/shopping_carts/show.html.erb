@@ -33,8 +33,7 @@
             </div>
           </div>
           <div class="shopping-cart-delete">
-            <p><a href="#"><span class="glyphicon glyphicon-trash"></span></a>
-            </p>
+            <%= link_to "", shopping_cart_item_path(item), method: :delete, data: { confirm: "Are you sure to remove this item?" }, class: "glyphicon glyphicon-trash" %>
           </div>
 
         </div>
