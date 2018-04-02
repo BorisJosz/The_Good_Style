@@ -135,6 +135,7 @@ Color.create!(
   color: "white",
 })
 
+#generate sustainab
 
 # generate products
 puts 'creating products'
@@ -316,6 +317,7 @@ products << Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
+
   })
 
 #generate sustainability infos
@@ -352,6 +354,7 @@ SustainabilityInfo.create!(
   description: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   rating: 4,
   product: Product.all.sample,
+
   })
 
 #generating product variations

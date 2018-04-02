@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180402134417) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -63,8 +64,10 @@ ActiveRecord::Schema.define(version: 20180402134417) do
     t.bigint "brand_id"
     t.bigint "product_category_id"
     t.integer "price_cents", default: 0, null: false
+    t.bigint "sustainability_info_id"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["product_category_id"], name: "index_products_on_product_category_id"
+    t.index ["sustainability_info_id"], name: "index_products_on_sustainability_info_id"
     t.index ["target_audience_id"], name: "index_products_on_target_audience_id"
   end
 
@@ -117,6 +120,7 @@ ActiveRecord::Schema.define(version: 20180402134417) do
   end
 
   create_table "sustainability_infos", force: :cascade do |t|
+
     t.text "sustainability_class"
     t.text "description"
     t.text "rating"
@@ -126,6 +130,7 @@ ActiveRecord::Schema.define(version: 20180402134417) do
     t.string "icon"
     t.string "icon_pale"
     t.index ["product_id"], name: "index_sustainability_infos_on_product_id"
+
   end
 
   create_table "target_audiences", force: :cascade do |t|
