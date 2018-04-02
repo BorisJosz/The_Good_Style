@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   #mail
-  after_create :send_welcome_email
+ # after_create :send_welcome_email
   #cloudinary upload
   mount_uploader :photo, PhotoUploader
   # Include default devise modules. Others available are:
