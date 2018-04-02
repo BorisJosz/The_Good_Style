@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'starting the seeds'
 
+SustainabilityInfo.destroy_all
 ProductVariation.destroy_all
 TargetAudience.destroy_all
 Brand.destroy_all
@@ -149,10 +150,7 @@ products << Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
-    material_info: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
-    people_info: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
-    location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
-    distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
+
   })
 
 products <<  Product.create!(
@@ -164,10 +162,6 @@ products <<  Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/596519e915d5db63fc7384bd/1501015792187/?format=1000w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
-    material_info: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
-    people_info: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
-    location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
-    distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
 products << Product.create!(
@@ -179,10 +173,6 @@ products << Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651a66ebbd1a5c3be28b08/1499798126449/?format=2500w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
-    material_info: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
-    people_info: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
-    location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
-    distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
 products << Product.create!(
@@ -194,10 +184,6 @@ products << Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/5977b1e02e69cffa18f371ec/1501016556294/?format=750w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
-    material_info: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
-    people_info: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
-    location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
-    distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
 products << Product.create!(
@@ -209,10 +195,6 @@ products << Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651af83e00be66d5f7b256/1499798296479/?format=750w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
-    material_info: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
-    people_info: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
-    location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
-    distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
 products << Product.create!(
@@ -224,10 +206,6 @@ products << Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b252e69cf0722dbac40/1499798319087/?format=1000w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
-    material_info: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
-    people_info: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
-    location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
-    distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   })
 
 products << Product.create!(
@@ -239,10 +217,42 @@ products << Product.create!(
     image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
-    material_info: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
-    people_info: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
-    location_info: 'All of the products of Fabbrikka are made in Barcelona and shipped from Belgium',
-    distance_info: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
+  })
+
+#generate sustainability infos
+
+puts 'generating sustainability infos'
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'materials',
+  description: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
+  rating: 5,
+  product: Product.all.sample,
+  })
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'people',
+  description: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
+  rating: 4,
+  product: Product.all.sample,
+  })
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'distance',
+  description: 'This product is made in India',
+  rating: 2,
+  product: Product.all.sample,
+  })
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
+  rating: 4,
+  product: Product.all.sample,
   })
 
 #generating product variations
