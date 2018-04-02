@@ -15,6 +15,7 @@ margin: 0 auto;
   display: flex;
   background-color: white;
   margin: 20px;
+
 }
 
 .row-shopping-cart {
@@ -25,24 +26,22 @@ margin: 0 auto;
   display: flex;
   justify-content: center;
   align-content: space-around;
+  align-items: center;
   height: 160px;
   width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
   border-top : 0.3px solid #155162;
   border-bottom: 0.3px solid #155162;
   margin-bottom: 10px;
 }
 
 .order-summary {
-    display: flex;
-    background-color: white;
+  display: flex;
+  background-color: white;
 }
 
 .shopping-cart-image {
   height: 150px;
   background-size: cover;
-  background-position: 50% 50%;
 }
 
 .shopping-cart-info {
@@ -67,5 +66,4 @@ margin: 0 auto;
 .shopping-cart-imagebox {
   margin: 0 25px;
   width: 150px;
-  height: 200px;
 }

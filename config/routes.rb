@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "kids", to: "target_audiences#kids"
   resources :brands, only: [:index, :show]
 
-  resources :shopping_carts, only: [:show, :create]
+  resources :shopping_carts, only: [:show, :create, :delete]
     patch "quantity", to: "shopping_carts#quantity"
 
   devise_for :users
