@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330101636) do
+ActiveRecord::Schema.define(version: 20180402091900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,18 +57,16 @@ ActiveRecord::Schema.define(version: 20180330101636) do
     t.string "name"
     t.text "description"
     t.string "image"
-    t.text "material_info"
-    t.text "location_info"
-    t.text "people_info"
-    t.text "distance_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "target_audience_id"
     t.bigint "brand_id"
     t.bigint "product_category_id"
     t.integer "price_cents", default: 0, null: false
+    t.bigint "sustainability_info_id"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["product_category_id"], name: "index_products_on_product_category_id"
+    t.index ["sustainability_info_id"], name: "index_products_on_sustainability_info_id"
     t.index ["target_audience_id"], name: "index_products_on_target_audience_id"
   end
 
@@ -118,6 +116,16 @@ ActiveRecord::Schema.define(version: 20180330101636) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_variation_id"], name: "index_stocks_on_product_variation_id"
+  end
+
+  create_table "sustainability_infos", force: :cascade do |t|
+    t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "material"
+    t.text "people"
+    t.text "distance"
+    t.text "workplace"
   end
 
   create_table "target_audiences", force: :cascade do |t|

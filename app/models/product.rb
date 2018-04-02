@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   belongs_to :target_audience
   belongs_to :brand
   belongs_to :product_category
+  belongs_to  :sustainability_info
   has_many :reviews
   has_many :product_variations
   has_many :sizes, through: :product_variations
