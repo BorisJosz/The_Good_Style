@@ -166,6 +166,106 @@ products <<  Product.create!(
 products << Product.create!(
   {
     target_audience: TargetAudience.where(gender:"women").first,
+    name: "Skirt in Scuba",
+    description: "A simple yet elegant choice that fits everyday occasion",
+    price: "170.00",
+    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/ASOS_DESIGN_midi_prom_skirt_in_scuba.jpg",
+    brand: Brand.all.sample,
+    product_category: ProductCategory.all.sample,
+  })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "Wool Jacket",
+      description: "Put it on and this superb red wool jacket will make you smile. Models are not allowed to.",
+      price: "150.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522658600/jacket_wool.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "Simple Top",
+      description: "This simple top will be a great addition to your wardrobe",
+      price: "50.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/burgundy_top.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "Summer Dress",
+      description: "The perfect dress for your summer. So light you will not feel it",
+      price: "80.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/9129624-1-multi.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "Nude Blazer",
+      description: "A splendid nude blazer like no other",
+      price: "90.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/9033390-1-nude.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "Long Shirt",
+      description: "This long shirt will change how you see shirts",
+      price: "105.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/MUJ-T4384-BLACK.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "Dark Jeans",
+      description: "Slim fit jeans that will fit you like a glove or like jeans",
+      price: "55.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/MDN-P8212-UTILITYBLUE.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "White Shirt",
+      description: "Cozy white shit that will comfort you in every situation",
+      price: "70.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/LAW-T4383-WHITE.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    })
+
+  products << Product.create!(
+    {
+      target_audience: TargetAudience.where(gender:"women").first,
+      name: "Legacy Top",
+      description: "Simple top that fits with almost anything",
+      price: "120.00",
+      image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/S8TK-J4801M-245-Legacy.jpg",
+      brand: Brand.all.sample,
+      product_category: ProductCategory.all.sample,
+    }
+  )
+
+products << Product.create!(
+  {
+    target_audience: TargetAudience.where(gender:"women").first,
     name: 'Casual dress',
     description: 'Made with sustainable materials at heart, a comfortable and light dress to wear on any day',
     price: '120.00',
@@ -217,106 +317,6 @@ products << Product.create!(
     brand: Brand.all.sample,
     product_category: ProductCategory.all.sample,
   })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Wool Jacket",
-    description: "Put it on and this superb red wool jacket will make you smile. Models are not allowed to.",
-    price: "150.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522658600/jacket_wool.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Simple Top",
-    description: "This simple top will be a great addition to your wardrobe",
-    price: "50.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/burgundy_top.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Skirt in Scuba",
-    description: "A simple yet elegant choice that fits everyday occasion",
-    price: "170.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/ASOS_DESIGN_midi_prom_skirt_in_scuba.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Summer Dress",
-    description: "The perfect dress for your summer. So light you will not feel it",
-    price: "80.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/9129624-1-multi.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Nude Blazer",
-    description: "A splendid nude blazer like no other",
-    price: "90.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522659696/9033390-1-nude.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Long Shirt",
-    description: "This long shirt will change how you see shirts",
-    price: "105.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/MUJ-T4384-BLACK.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Dark Jeans",
-    description: "Slim fit jeans that will fit you like a glove or like jeans",
-    price: "55.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/MDN-P8212-UTILITYBLUE.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "White Shirt",
-    description: "Cozy white shit that will comfort you in every situation",
-    price: "70.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/LAW-T4383-WHITE.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  })
-
-products << Product.create!(
-  {
-    target_audience: TargetAudience.where(gender:"women").first,
-    name: "Legacy Top",
-    description: "Simple top that fits with almost anything",
-    price: "120.00",
-    image: "http://res.cloudinary.com/megednazednav/image/upload/v1522660822/S8TK-J4801M-245-Legacy.jpg",
-    brand: Brand.all.sample,
-    product_category: ProductCategory.all.sample,
-  }
-)
 
 #generate sustainability infos
 
