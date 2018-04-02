@@ -14,7 +14,7 @@
           </div>
           </div>
           <div class="shopping-cart-info">
-            <p><%= item.product_variation.product.name %></p>
+            <strong><%= item.product_variation.product.name %></strong>
             <p><%= item.product_variation.size.size %></p>
             <p><%= item.product_variation.color.color %></p>
           </div>
@@ -24,7 +24,7 @@
             <%= f.input :id, value: item.id, as: :hidden %></p>
             <% end %>
           </div>
-          <div class="shop-price">
+          <div class="shopping-price">
             <div class="shopping-cart-price">
               <p><%= item.product_variation.product.price %> €</p>
             </div>
@@ -44,11 +44,15 @@
 
     <div class="row">
     <div class="order-summary col-xs-12 col-sm-6">
-      <h3> Order Summary </h3>
+      <h3>Order Summary</h3>
+      <div class="order-summary-total">
       <%= form_tag new_shopping_cart_payment_path(@shoppingCart), method: :get do %>
-  <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
-  if you buy it will cost you <%= @shoppingCart.total %> €
-  <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
+      <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
+      if you buy it will cost you <%= @shoppingCart.total %> €
+      </div>
+      <div class= "order-summary-confirmation">
+      <%= submit_tag 'Buy', class: 'btn btn-primary btn-standard' %>
+      </div>
       <% end %>
     </div>
     </div>
