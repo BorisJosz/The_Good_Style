@@ -19,6 +19,7 @@
           <div class="selectors">
 
             <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
+
             <div class="select">
 
             <%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %>
@@ -49,12 +50,16 @@
                 <div class = "brandbox one"><%= image_tag @brand.logo, style: "width: 150px", class: "roundedlogo" %></div>
                 <div class = "brandbox two"><h4>Who is <%= @brand.name %>?</h4><p><%= @brand.description %></p></div>
 
-              </div>
 
-            </div>
-          </div>
+      <div class="row">
+        <div class="backgroundbrand">
+          <div class = "brandbox one"><%= image_tag @brand.logo, style: "width: 150px", class: "roundedlogo" %></div>
+          <div class = "brandbox two"><h4>Who is <%= @brand.name %>?</h4><p><%= @brand.description %></p></div>
+
         </div>
 
-
+      </div>
+    </div>
+  </div>
 
 

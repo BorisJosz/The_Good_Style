@@ -93,3 +93,25 @@
   color: white;
   margin-right: 10px;
 }
+
+.fa-shopping-cart {
+  margin-right: 10px;
+}
+
+.shopping-cart-item-number {
+  color: #155061;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.navbar-wagon-item, .navbar-wagon-link {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
