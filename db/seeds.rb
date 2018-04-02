@@ -329,7 +329,7 @@ SustainabilityInfo.create!(
   rating: 5,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
-  product: Product.where(name:"Colorful dress").first,
+  product_id: Product.where(name:"Colorful dress").first.id,
   })
 
 SustainabilityInfo.create!(
