@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
     @product_variations  = ProductVariation.new
     @product = Product.find(params[:id])
     @brand = @product.brand
+    @sustainability_infos = @product.sustainability_infos
   end
 
   def index

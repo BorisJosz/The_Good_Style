@@ -228,7 +228,9 @@ SustainabilityInfo.create!(
   sustainability_class: 'materials',
   description: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
   rating: 5,
-  product: Product.all.sample,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name:"Colorful dress").first,
   })
 
 SustainabilityInfo.create!(
@@ -236,7 +238,9 @@ SustainabilityInfo.create!(
   sustainability_class: 'people',
   description: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
   rating: 4,
-  product: Product.all.sample,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name:"Colorful dress").first,
   })
 
 SustainabilityInfo.create!(
@@ -244,7 +248,9 @@ SustainabilityInfo.create!(
   sustainability_class: 'distance',
   description: 'This product is made in India',
   rating: 2,
-  product: Product.all.sample,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name:"Colorful dress").first,
   })
 
 SustainabilityInfo.create!(
@@ -252,11 +258,13 @@ SustainabilityInfo.create!(
   sustainability_class: 'workplace',
   description: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
   rating: 4,
-  product: Product.all.sample,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name:"Colorful dress").first,
   })
 
 #generating product variations
-
+puts 'creating product variations'
 products.each do |product|
   Color.all.each do |color|
     Size.all.each do |size|
@@ -270,5 +278,7 @@ products.each do |product|
 end
 end
 
-puts 'creating product variations'
+
+
+
 

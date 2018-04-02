@@ -15,18 +15,23 @@
           <h3> <%= humanized_money_with_symbol(@product.price)%></h3>
           <br>
           <p><%= @product.description%></p>
+
           <div class="selectors">
 
             <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
-            <ul class = "list-inline">
-            <li><%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %></li>
+            <div class="select">
+
+            <%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <li><%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false%></li>
+            <%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false%>
+            </div>
+            <div class="select"> <%= render 'products/sustainability_infos' %></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row ">
+
+<div class="row ">
       <div class="buttonrow">
         <%= link_to 'SHOP MORE', "/#{@product.target_audience.gender}", class:"btn btn-default btn-standard"%>
            &nbsp;&nbsp;&nbsp;
@@ -39,9 +44,6 @@
         </div>
     </div>
 
-
-
-
             <div class="row">
               <div class="backgroundbrand">
                 <div class = "brandbox one"><%= image_tag @brand.logo, style: "width: 150px", class: "roundedlogo" %></div>
@@ -52,4 +54,7 @@
             </div>
           </div>
         </div>
+
+
+
 
