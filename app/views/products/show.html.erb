@@ -19,37 +19,37 @@
 
             <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
             <ul class = "list-inline">
-            <li><%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %></li>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <li><%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false%></li>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row ">
-      <div class="buttonrow">
-        <%= link_to 'SHOP MORE', "/#{@product.target_audience.gender}", class:"btn btn-default btn-standard"%>
-           &nbsp;&nbsp;&nbsp;
-        <%= f.button :submit, "ADD TO CART", class: "btn-standard" %>
-        &nbsp;&nbsp;&nbsp;
-         <% unless current_user.nil? %>
-        <%= link_to "GO TO CART ", shopping_cart_path(current_user.current_shopping_cart), class:"btn btn-default btn-standard" %>
-<% end %>
-        <% end %>
-        </div>
-    </div>
-
-
-
-
-            <div class="row">
-              <div class="backgroundbrand">
-                <div class = "brandbox one"><%= image_tag @brand.logo, style: "width: 150px", class: "roundedlogo" %></div>
-                <div class = "brandbox two"><h4>Who is <%= @brand.name %>?</h4><p><%= @brand.description %></p></div>
-
-              </div>
-
+              <li><%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %></li>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <li><%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false%></li>
             </div>
           </div>
         </div>
+      </div>
+      <div class="row ">
+        <div class="buttonrow">
+          <%= link_to 'SHOP MORE', "/#{@product.target_audience.gender}", class:"btn btn-default btn-standard"%>
+          &nbsp;&nbsp;&nbsp;
+          <%= f.button :submit, "ADD TO CART", class: "btn-standard" %>
+          &nbsp;&nbsp;&nbsp;
+          <% unless current_user.nil? %>
+          <%= link_to "GO TO CART ", shopping_cart_path(current_user.current_shopping_cart), class:"btn btn-default btn-standard" %>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="backgroundbrand">
+          <div class = "brandbox one"><%= image_tag @brand.logo, style: "width: 150px", class: "roundedlogo" %></div>
+          <div class = "brandbox two"><h4>Who is <%= @brand.name %>?</h4><p><%= @brand.description %></p></div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 
