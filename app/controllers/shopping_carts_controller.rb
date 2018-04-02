@@ -19,6 +19,7 @@ class ShoppingCartsController < ApplicationController
      # 5 as we have all the infos to create a shopping cart item in DB, we create it
     ShoppingCartItem.create!(product_variation: @productVariation.first, shopping_cart: @shoppingCart)
     # 6 render js code so we dont change page and can yet update
+    flash[:notice] = "This product has been added to the cart"
     redirect_to product_path(@product)
 
   end
@@ -36,6 +37,7 @@ class ShoppingCartsController < ApplicationController
     @shopping_cart_items = ShoppingCartItem.all
     @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
   end
+
 
   def quantity
     @shopping_cart_item = ShoppingCartItem.find(set_shopping_cart_items[:id])
