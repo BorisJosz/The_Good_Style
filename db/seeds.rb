@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'starting the seeds'
 
+SustainabilityInfo.destroy_all
 ProductVariation.destroy_all
 TargetAudience.destroy_all
 Brand.destroy_all
@@ -316,6 +317,42 @@ products << Product.create!(
     product_category: ProductCategory.all.sample,
   }
 )
+
+#generate sustainability infos
+
+puts 'generating sustainability infos'
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'materials',
+  description: 'Only organic cotton is used to create this beautiful piece, which makes it super soft and cuddly',
+  rating: 5,
+  product: Product.all.sample,
+  })
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'people',
+  description: 'The people that made this shirt are paid a very decent wage and work as self employed seamstresses',
+  rating: 4,
+  product: Product.all.sample,
+  })
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'distance',
+  description: 'This product is made in India',
+  rating: 2,
+  product: Product.all.sample,
+  })
+
+SustainabilityInfo.create!(
+{
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of Barcelona by a seamstress named Samira',
+  rating: 4,
+  product: Product.all.sample,
+  })
 
 #generating product variations
 
