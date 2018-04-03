@@ -130,7 +130,7 @@ products << Product.create!(
   name: 'White blouse',
   description: 'Lovely light dress, perfect for summer!',
   price: '80.00',
-  image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/544ea656e4b07de01f73d3c5/59600d1859cc68c19ada7262/1515096769963/ethical%2Bbrands%2Buk.png?format=2500w',
+  image: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.all.sample
 )
@@ -138,9 +138,9 @@ products << Product.create!(
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'Comfy sweater',
-  description: 'Straight from India',
+  description: 'The best sweater ever. Not lying.',
   price: '60.50',
-  image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/596519e915d5db63fc7384bd/1501015792187/?format=1000w',
+  image: 'http://res.cloudinary.com/megednazednav/image/upload/c_scale,w_990/v1522774955/DSC08791_copia.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.all.sample
 )
@@ -150,7 +150,7 @@ products << Product.create!(
   name: 'Skirt in Scuba',
   description: 'A simple yet elegant choice that fits everyday occasion',
   price: '170.00',
-  image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522659696/ASOS_DESIGN_midi_prom_skirt_in_scuba.jpg',
+  image: 'http://res.cloudinary.com/megednazednav/image/upload/c_scale,w_806/v1522774898/DSC09148_copia.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.all.sample
 )
@@ -160,7 +160,7 @@ products << Product.create!(
   name: 'Wool Jacket',
   description: 'Put it on and this superb red wool jacket will make you smile. Models are not allowed to.',
   price: '150.00',
-  image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522658600/jacket_wool.jpg',
+  image: 'https://cdn.shopify.com/s/files/1/1431/0176/products/Angela_dark_blue_1024x1024.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.all.sample
 )
@@ -170,7 +170,7 @@ products << Product.create!(
   name: 'Simple Top',
   description: 'This simple top will be a great addition to your wardrobe',
   price: '50.00',
-  image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522659696/burgundy_top.jpg',
+  image: 'https://cdn.shopify.com/s/files/1/1431/0176/products/Ethical_fashion_brands_organic_cotton_top_Elisa_front_368311b7-64c6-4949-9538-7608f356b950_1024x1024.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.all.sample
 )
