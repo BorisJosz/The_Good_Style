@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ShoppingCartItemsController < ApplicationController
   def destroy
     @shopping_cart_item = ShoppingCartItem.find(params[:id])
