@@ -70,9 +70,17 @@
   }
 }
 
+.infodiv {
+  background-color: #F2F2F2;
+  width: 80%;
+  position: absolute;
+  bottom: -173px;
+  padding: 25px 0;
+}
+
 #new_product_variation {
   position: absolute;
-  bottom: 0px;
+  bottom: 200px;
   width: 100%
 }
 
@@ -80,10 +88,4 @@
   width: 80%
 }
 
-.infodiv {
-  background-color: #F2F2F2;
-  width: 80%;
-  position: absolute;
-  bottom: 100px;
-  padding: 25px 0;
-}
+

@@ -21,7 +21,7 @@
           <br>
           <p><%= @product.description%></p>
 
-          <%= render 'products/sustainability_infos' %>
+
 
             <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
 
@@ -32,7 +32,7 @@
 
            </ul>
 
-
+          <%= render 'products/sustainability_infos' %>
 
 
         </div>

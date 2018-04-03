@@ -53,7 +53,7 @@ user = User.create!(
 puts 'creating brands'
 brand = Brand.create!(
   name: 'Fabbrikka',
-  logo: 'https://i.pinimg.com/avatars/fabbrikka_1504642575_280.jpg',
+  logo: 'http://res.cloudinary.com/megednazednav/image/upload/v1522787069/logofabbrikka.png',
   address: 'Belgium, Brussels',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   url: 'https://fabbrikka.com/',
