@@ -87,9 +87,10 @@
 }
 
 .infobox {
-  padding: 25px 25px 70px 25px;
+  padding: 25px 25px 25px 25px;
   display: flex;
   align-items: center;
+  background-color: white;
 }
 
 .subinfobox {
@@ -110,7 +111,7 @@
 
 .infodetailright {
   flex: 1 1 80%;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
 }
 
 #new_product_variation {

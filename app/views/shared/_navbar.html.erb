@@ -19,7 +19,9 @@
 
     <a href="<%= shopping_cart_path(current_user.current_shopping_cart) %>", class="navbar-wagon-item navbar-wagon-link">
       <i class="fas fa-shopping-cart"></i>
+      <% unless current_user.current_shopping_cart.shopping_cart_items.empty? %>
       <p class="shopping-cart-item-number"><%= current_user.current_shopping_cart.shopping_cart_items.count %></p>
+      <% end %>
     </a>
 
     <!-- Avatar with dropdown menu -->
