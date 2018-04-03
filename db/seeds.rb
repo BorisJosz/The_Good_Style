@@ -339,7 +339,7 @@ SustainabilityInfo.create!(
   rating: 4,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
-  product: Product.where(name:"Colorful dress").first,
+  product_id: Product.where(name:"Colorful dress").first,
   })
 
 SustainabilityInfo.create!(
