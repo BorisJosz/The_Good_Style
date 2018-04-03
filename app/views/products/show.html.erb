@@ -36,9 +36,13 @@
       <div class="buttonrow">
         <%= link_to 'SHOP MORE', "/#{@product.target_audience.gender}", class:"btn btn-default btn-standard"%>
            &nbsp;&nbsp;&nbsp;
+           <% if current_user.nil? %>
+           <%= link_to "LOG IN TO BUY", new_user_session_path, class:"btn btn-default btn-standard" %>
+           <% end %>
+           <% unless current_user.nil? %>
         <%= f.button :submit, "ADD TO CART", class: "btn-standard" %>
         &nbsp;&nbsp;&nbsp;
-         <% unless current_user.nil? %>
+
         <%= link_to "GO TO CART ", shopping_cart_path(current_user.current_shopping_cart), class:"btn btn-default btn-standard" %>
 <% end %>
         <% end %>
