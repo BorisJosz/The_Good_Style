@@ -104,14 +104,20 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  line-height: 20px; /* <-- this is what you must define */
   text-align: center;
-  vertical-align: center;
 }
 
 .navbar-wagon-item, .navbar-wagon-link {
   display: flex;
-  align-content: center;
   justify-content: center;
+  vertical-align: middle;
   margin-top: 10px;
+}
+
+.navbar-wagon-item.navbar-wagon-link {
+  &:hover p {
+  background-color: #da552f;
+  }
 }
 
