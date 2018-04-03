@@ -11,6 +11,7 @@ SustainabilityInfo.destroy_all
 ProductVariation.destroy_all
 TargetAudience.destroy_all
 Brand.destroy_all
+
 User.destroy_all
 Product.destroy_all
 Color.destroy_all
@@ -329,7 +330,7 @@ SustainabilityInfo.create!(
   rating: 5,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
-  product: Product.where(name:"Colorful dress").first.id,
+  product: Product.where(name:"Colorful dress").first,
   })
 
 SustainabilityInfo.create!(
@@ -339,7 +340,7 @@ SustainabilityInfo.create!(
   rating: 4,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
-  product_id: Product.where(name:"Colorful dress").first,
+  product: Product.where(name:"Colorful dress").first,
   })
 
 SustainabilityInfo.create!(
