@@ -141,6 +141,9 @@ products << Product.create!(
   description: 'The best sweater ever. Not lying.',
   price: '60.50',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/c_scale,w_990/v1522774955/DSC08791_copia.jpg',
+  image2: 'http://res.cloudinary.com/megednazednav/image/upload/v1522778486/DSC00051_copia.jpg',
+  image3: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_260/v1522778532/DSC00068_copia.jpg',
+  image4: 'http://res.cloudinary.com/megednazednav/image/upload/v1522778256/DSC00039_copia.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.all.sample
 )
@@ -295,7 +298,7 @@ SustainabilityInfo.create!(
   rating: 5,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
-  product: Product.where(name: 'Colorful dress').first
+  product: Product.where(name: 'Comfy sweater').first
 )
 
 SustainabilityInfo.create!(
@@ -304,7 +307,7 @@ SustainabilityInfo.create!(
   rating: 4,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
-  product: Product.where(name: 'Colorful dress').first
+  product: Product.where(name: 'Comfy sweater').first
 )
 
 SustainabilityInfo.create!(
@@ -313,7 +316,7 @@ SustainabilityInfo.create!(
   rating: 2,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
-  product: Product.where(name: 'Colorful dress').first
+  product: Product.where(name: 'Comfy sweater').first
 )
 
 SustainabilityInfo.create!(
@@ -322,7 +325,7 @@ SustainabilityInfo.create!(
   rating: 4,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
-  product: Product.where(name: 'Colorful dress').first
+  product: Product.where(name: 'Comfy sweater').first
 )
 
 # generating product variations
