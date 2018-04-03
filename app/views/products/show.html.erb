@@ -16,18 +16,20 @@
           <br>
           <p><%= @product.description%></p>
 
-          <div class="selectors">
+          <%= render 'products/sustainability_infos' %>
 
             <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
 
-            <div class="select">
-
-            <%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %>
+            <ul class="selectorarrows list-inline text-center">
+              <li><%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %></li>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false%>
-            </div>
-            <div class="select"> <%= render 'products/sustainability_infos' %></div>
-          </div>
+           <li><%= f.input :color, collection: @product.colors.uniq, value_method: :id,prompt: "Pick your color", label_method: :color, label:false%></li>
+
+           </ul>
+
+
+
+
         </div>
       </div>
     </div>
@@ -61,6 +63,6 @@
 
       </div>
     </div>
-  </div>
+
 
 

@@ -38,18 +38,17 @@
 }
 
 .paddingrow {
-  padding: 50px;
+  padding: 50px 50px 80px 50px;
 }
 
 .selectors {
   display: flex;
-  position: absolute;
   bottom: 60px;
   width: 100%;
 }
 
 .select {
-  width: 300px;
+  flex: 1 1 auto;
 }
 
 .select h5 {
@@ -114,16 +113,3 @@
   padding: 20px 40px 20px 20px;
 }
 
-#new_product_variation {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 1200px;
-}
-
-#product_variation_size {
-  width: 180px;
-}
-
-#product_variation_color {
-  width: 180px;
-}

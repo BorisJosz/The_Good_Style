@@ -1,22 +1,12 @@
-
-
+<div class="infodiv text-center">
+<div class="infotitle"><p>How sustainable is this piece?</p></div>
 <div class="information">
-  <% @sustainability_infos.each do |info| %>
-  <div class="paddingsust">
+<% @sustainability_infos.each do |info| %>
 <span class="sustainability-infos">
-  <% info.rating.to_i.times do %>
-    <%= image_tag info.icon, width: "22px" %>
-<% end %>
-  <% (5 - info.rating.to_i).times do %>
-  <%= image_tag info.icon_pale, width: "22px" %>
-<% end %>
-
-
+<%= image_tag info.icon, height: "50px" %>
 <span class="popover above"><%= info.sustainability_class.upcase %><br><%= info.description %></span>
 <br>
 </span>
-</div>
   <% end %>
 </div>
-
-
+</div>
