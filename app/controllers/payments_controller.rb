@@ -3,6 +3,7 @@
 class PaymentsController < ApplicationController
   before_action :set_order
 
+
   def new
   end
 
@@ -10,6 +11,7 @@ class PaymentsController < ApplicationController
     @shopping_cart = ShoppingCart.find(params[:shopping_cart_id])
     @user = @shopping_cart.user
   end
+
 
   def create
     customer = Stripe::Customer.create(
@@ -25,6 +27,7 @@ class PaymentsController < ApplicationController
     )
 
     @shopping_cart.update(payment: charge.to_json, status: 'paid')
+    UserMailer.confirm_payment(params[:stripeEmail]).deliver_now
     redirect_to shopping_cart_thanks_path(@shopping_cart)
 rescue Stripe::CardError => e
   flash[:alert] = e.message
@@ -36,4 +39,8 @@ end
   def set_order
     @shopping_cart = ShoppingCart.find(params[:shopping_cart_id])
   end
+
+  # def send_confirmation_email
+  #   UserMailer.confirm_payment(self).deliver_now
+  # end
 end

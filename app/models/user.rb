@@ -2,7 +2,7 @@
 
 class User < ApplicationRecord
   # mail
-  # after_create :send_welcome_email
+  after_create :send_welcome_email
   # cloudinary upload
   mount_uploader :photo, PhotoUploader
   # Include default devise modules. Others available are:
@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :shopping_carts
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
   def current_shopping_cart
     shoppingCart = ShoppingCart.where(user: self, status: false).first
     if shoppingCart.nil?
@@ -25,5 +26,6 @@ class User < ApplicationRecord
 
   def send_welcome_email
     UserMailer.welcome(self).deliver_now
- end
+  end
+
 end
