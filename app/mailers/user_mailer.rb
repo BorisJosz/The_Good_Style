@@ -8,4 +8,9 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to The Good Style')
     # This will render a view in `app/views/user_mailer`!
   end
+
+  def confirm_payment(user)
+    mail(to: user, subject: 'Payment Confirmation')
+  end
+
 end
