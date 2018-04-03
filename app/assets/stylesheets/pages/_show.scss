@@ -1,6 +1,6 @@
 
 .show-page {
-  height: 500px;
+  height: 700px;
   padding: 0
 }
 
@@ -113,3 +113,20 @@
   padding: 20px 40px 20px 20px;
 }
 
+.smallimagebox {
+  padding-top: 30px;
+  height: 200px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  padding-right: 50px;
+  grid-column-gap: 20px;
+  border-right: 1px solid #B1B4B7;
+}
+
+.small-image {
+  grid-row: 1;
+  height: auto;
+  max-width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
