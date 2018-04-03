@@ -4,7 +4,14 @@ class PaymentsController < ApplicationController
   before_action :set_order
 
 
-  def new; end
+  def new
+  end
+
+  def thanks
+    @shopping_cart = ShoppingCart.find(params[:shopping_cart_id])
+    @user = @shopping_cart.user
+  end
+
 
   def create
     customer = Stripe::Customer.create(
