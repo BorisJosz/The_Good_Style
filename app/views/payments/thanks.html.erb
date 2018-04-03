@@ -1,1 +1,26 @@
-<div class="text-center"><iframe src="https://giphy.com/embed/osjgQPWRx3cac" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></div>
+
+<div class="container-thanks">
+
+  <div class="row-thanks">
+    <div class="thanks-main-info col-xs-12 col-sm-12">
+      <h3><i class="fas fa-ellipsis-v"></i>   Thanks</h3>
+      <div class="thanks-sustainable">
+        <img src="http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg" alt="people" style="width: 40px;">
+        <p>"Great, <em><%=@user.name %></em>! You're sooo good styled!"</p>
+        <p> With your order, you're acting for a better world.</p>
+      </div>
+      <div class="thanks-references">
+        <p>Here are the references of your order:<strong> <%= Time.now.strftime("%Y/%m") %>/order-<%= @shopping_cart.id%></strong> .</p>
+        <p>You can use these references for your further communications.</p>
+      </div>
+      <div class="thanks-mail">
+        <p>You can find back <strong>all the details of your order on your email</strong> :<%=@user.email %>.</p>
+        <p>If you don't receive our confirmation mail, please let us know: customerservice@thegoodstyle.store . </p>
+      </div>
+      <div class="thanks-seeyou">
+        <p>We hope to see you back again on<em> Thegoodstyle.store</em>.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
