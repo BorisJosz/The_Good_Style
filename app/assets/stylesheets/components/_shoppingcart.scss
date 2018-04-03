@@ -13,7 +13,7 @@ margin: 0 auto;
 .selection {
   display: flex;
   background-color: white;
-  margin: 20px;
+  margin: 30px;
 }
 
 .row-shopping-cart {
@@ -36,12 +36,6 @@ margin: 0 auto;
   }
 }
 
-.order-summary {
-  display: flex;
-  background-color: white;
-  align-items: center;
-  margin: 30px;
-}
 
 .shopping-cart-imagebox {
   margin: 0 25px;
@@ -72,4 +66,23 @@ margin: 0 auto;
 
 .shopping-cart-price {
   margin-right: 20px;
+}
+
+
+.order-summary {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 30px;
+  padding: 20px;
+}
+.order-summary-total {
+  display: flex;
+  margin-top: 10px;
+}
+
+.order-summary-confirmation {
+  display: flex;
+  margin-top: 10px;
 }
