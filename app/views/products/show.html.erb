@@ -39,7 +39,7 @@
         <%= f.button :submit, "ADD TO CART", class: "btn-standard" %>
         &nbsp;&nbsp;&nbsp;
          <% unless current_user.nil? %>
-        <%= link_to "GO TO CART ", shopping_cart_path(current_user.current_shopping_cart), class:"btn btn-default btn-standard" %>
+        <button class="custom-btn btn-5 "><%= link_to "GO TO CART ", shopping_cart_path(current_user.current_shopping_cart), class:"btn btn-default btn-standard" %></button>
 <% end %>
         <% end %>
         </div>
