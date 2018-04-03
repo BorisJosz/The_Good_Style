@@ -11,6 +11,7 @@ SustainabilityInfo.destroy_all
 ProductVariation.destroy_all
 TargetAudience.destroy_all
 Brand.destroy_all
+
 User.destroy_all
 Product.destroy_all
 Color.destroy_all
