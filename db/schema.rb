@@ -57,6 +57,10 @@ ActiveRecord::Schema.define(version: 20180402134417) do
     t.string "name"
     t.text "description"
     t.string "image"
+    t.text "material_info"
+    t.text "location_info"
+    t.text "people_info"
+    t.text "distance_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "target_audience_id"
@@ -120,12 +124,14 @@ ActiveRecord::Schema.define(version: 20180402134417) do
     t.text "sustainability_class"
     t.text "description"
     t.text "rating"
+    t.bigint "products_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "product_id"
     t.string "icon"
     t.string "icon_pale"
     t.index ["product_id"], name: "index_sustainability_infos_on_product_id"
+    t.index ["products_id"], name: "index_sustainability_infos_on_products_id"
   end
 
   create_table "target_audiences", force: :cascade do |t|
