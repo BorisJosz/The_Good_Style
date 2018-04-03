@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProductVariationsController < ApplicationController
   def new
     @product_variation = ShoppingCartItem.new

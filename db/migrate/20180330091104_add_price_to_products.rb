@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddPriceToProducts < ActiveRecord::Migration[5.1]
   def change
     add_monetize :products, :price, currency: { present: false }

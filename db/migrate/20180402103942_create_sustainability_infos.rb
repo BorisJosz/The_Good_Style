@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSustainabilityInfos < ActiveRecord::Migration[5.1]
   def change
     create_table :sustainability_infos do |t|

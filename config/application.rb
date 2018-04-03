@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -11,7 +13,7 @@ module TheGoodStyle
     config.generators do |generate|
       generate.assets false
       generate.helper false
-      generate.test_framework  :test_unit, fixture: false
+      generate.test_framework :test_unit, fixture: false
     end
 
     # Initialize configuration defaults for originally generated Rails version.
@@ -21,7 +23,7 @@ module TheGoodStyle
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    #AJAX
+    # AJAX
     config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
