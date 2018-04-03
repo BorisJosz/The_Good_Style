@@ -1,14 +1,22 @@
 <div class="container">
-<div class="row paypay text-center">
-<h1>Now it's time to pay</h1>
+  <div class="row text-center">
+<div class="col-xs-12 col-md-6 col-md-offset-3 paypay">
 
+<h1>
+
+ Now it's time to pay
+
+</h1>
+<br>
+<br>
 <%= form_tag new_shopping_cart_payment_path(@shopping_cart) do %>
   <article>
     <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@shopping_cart.total) %></span>
+      <h4><span>Total: <%= humanized_money_with_symbol(@shopping_cart.total) %></span>
     </label>
   </article>
-
+<br>
+<br>
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-name="The Good Style"
@@ -17,6 +25,8 @@
     data-amount="<%= @shopping_cart.amount_cents %>"
     data-currency="<%= @shopping_cart.amount.currency %>"></script>
 <% end %>
+
+</div>
 </div>
 </div>
 

@@ -1,5 +1,5 @@
 class RemoveProductsFromSustainabilityInfos < ActiveRecord::Migration[5.1]
   def change
-    remove_column :sustainability_infos, :products_id
+    remove_foreign_key :sustainability_infos, :products
   end
 end

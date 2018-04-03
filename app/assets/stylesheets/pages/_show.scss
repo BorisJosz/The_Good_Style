@@ -1,3 +1,4 @@
+
 .show-page {
   height: 500px;
   padding: 0
@@ -44,16 +45,17 @@
   display: flex;
   position: absolute;
   bottom: 60px;
-  width: 70%;
+  width: 100%;
 }
 
 .select {
-  flex: 1 1 50%;
+  width: 300px;
 }
 
 .select h5 {
   font-weight: 400;
 }
+
 
 .fa-chevron-down {
   color: #F0B917;
@@ -85,9 +87,10 @@
 }
 
 .infobox {
-  padding: 25px 25px 70px 25px;
+  padding: 25px 25px 25px 25px;
   display: flex;
   align-items: center;
+  background-color: white;
 }
 
 .subinfobox {
@@ -108,5 +111,19 @@
 
 .infodetailright {
   flex: 1 1 80%;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
+}
+
+#new_product_variation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1200px;
+}
+
+#product_variation_size {
+  width: 180px;
+}
+
+#product_variation_color {
+  width: 180px;
 }
