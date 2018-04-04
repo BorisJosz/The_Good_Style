@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   # mail
   after_create :send_welcome_email
+  after_create :checkphoto
   # cloudinary upload
   mount_uploader :photo, PhotoUploader
   # Include default devise modules. Others available are:
@@ -23,6 +24,13 @@ class User < ApplicationRecord
   end
 
   private
+
+  def checkphoto
+    if self.photo.blank?
+      self.photo = open("http://res.cloudinary.com/megednazednav/image/upload/v1522853433/john_smith.jpg")
+      self.save
+    end
+  end
 
   def send_welcome_email
     UserMailer.welcome(self).deliver_now

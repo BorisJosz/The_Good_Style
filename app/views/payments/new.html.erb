@@ -22,7 +22,7 @@
     data-name="The Good Style"
     data-email="<%= current_user.email %>"
     data-description="Sustainable clothing <%= @shopping_cart.id %>"
-    data-amount="<%= @shopping_cart.amount_cents %>"
+    data-amount="<%= (@shopping_cart.total + Money.new(800)).to_i * 100 %>"
     data-currency="<%= @shopping_cart.amount.currency %>"></script>
 <% end %>
 
