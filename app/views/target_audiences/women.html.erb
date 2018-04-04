@@ -3,6 +3,32 @@
     <%= image_tag ("https://res.cloudinary.com/megednazednav/image/upload/v1522237746/The%20Good%20Style/logo.png"), width: "100px", class: "centered-logo" %>
     <h1>Shop our beautiful women's clothes</h1>
     <br>
+    <p>*******Aline Test area*********</p>
+      <p>TEST 1</p>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Blouse") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Dress") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Ensemble") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Jacket") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Jeans") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Shirt") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Skirt") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Sweater") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Top") %>
+      <%= check_box_tag(:catergory) %>
+      <%= label_tag(:product_category, "Trousers") %>
+      <br>
+      <p>TEST 2</p>
+      <%= select_tag(:product_category, options_for_select([['Blouse', 1], ['Dress', 2], ['Ensemble', 3],['Jacket', 4],['Jeans', 5],['Shirt', 6],['Skirt', 7],['Sweater', 8],['Top', 9],['Trousers', 10] ])) %>
+    <p>*******Aline Test area*********</p>
     <br>
     <div class="row">
       <% @products.each do |product| %>
