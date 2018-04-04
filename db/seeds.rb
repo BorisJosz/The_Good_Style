@@ -159,6 +159,9 @@ products << Product.create!(
   description: 'Simple top that fits with almost anything',
   price: '120.00',
   image: 'https://i.pinimg.com/564x/96/56/3e/96563e0a11b80385d0d7985f5407cd0e.jpg',
+  image2: 'https://i.pinimg.com/564x/96/56/3e/96563e0a11b80385d0d7985f5407cd0e.jpg',
+  image3: 'https://i.pinimg.com/564x/96/56/3e/96563e0a11b80385d0d7985f5407cd0e.jpg',
+  image4: 'https://i.pinimg.com/564x/96/56/3e/96563e0a11b80385d0d7985f5407cd0e.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category:'Top').first,
 )
@@ -169,6 +172,9 @@ products << Product.create!(
   description: 'Made with sustainable materials at heart, a comfortable and light dress to wear on any day',
   price: '120.00',
   image: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
+  image2: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
+  image3: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
+  image4: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category:'Sweater').first,
 )
@@ -179,6 +185,9 @@ products << Product.create!(
   description: 'Wow your partner in this simple yet elegant dress',
   price: '85.00',
   image: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
+  image2: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
+  image3: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
+  image4: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Skirt').first,
 )
@@ -189,6 +198,9 @@ products << Product.create!(
   description: 'A simple yet elegant choice that fits everyday occasion',
   price: '170.00',
   image: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
+  image2: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
+  image3: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
+  image4: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Skirt').first,
 )
@@ -199,6 +211,9 @@ products << Product.create!(
   description: 'This pair of shorts and t-shirt were made for you',
   price: '280.00',
   image: 'https://i.pinimg.com/564x/c5/f0/63/c5f06323ef13e33b9556930ffc8f1059.jpg',
+  image2: 'https://i.pinimg.com/564x/c5/f0/63/c5f06323ef13e33b9556930ffc8f1059.jpg',
+  image3: 'https://i.pinimg.com/564x/c5/f0/63/c5f06323ef13e33b9556930ffc8f1059.jpg',
+  image4: 'https://i.pinimg.com/564x/c5/f0/63/c5f06323ef13e33b9556930ffc8f1059.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Ensemble').first,
 )
@@ -222,6 +237,9 @@ products << Product.create!(
   description: 'Arboring a splendid rose beige color, this dress is sure to turn heads',
   price: '50.99',
   image: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
+  image2: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
+  image3: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
+  image4: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Dress').first,
 )
@@ -232,6 +250,9 @@ products << Product.create!(
   description: 'Why not bring some colors to your style with these superbe items',
   price: '90.00',
   image: 'https://i.pinimg.com/564x/c1/85/1d/c1851d32d78f7290afd3474425a609ef.jpg',
+  image2: 'https://i.pinimg.com/564x/c1/85/1d/c1851d32d78f7290afd3474425a609ef.jpg',
+  image3: 'https://i.pinimg.com/564x/c1/85/1d/c1851d32d78f7290afd3474425a609ef.jpg',
+  image4: 'https://i.pinimg.com/564x/c1/85/1d/c1851d32d78f7290afd3474425a609ef.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Dress').first,
 )
@@ -242,6 +263,9 @@ products << Product.create!(
   description: 'Lovely light dress, perfect for summer!',
   price: '80.00',
   image: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
+  image2: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
+  image3: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
+  image4: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Blouse').first,
 )
@@ -252,6 +276,9 @@ products << Product.create!(
   description: 'Put it on and this superb red wool jacket will make you smile. Models are not allowed to.',
   price: '150.00',
   image: 'https://i.pinimg.com/564x/25/7f/66/257f66c1b089a40a3499cefabfa44a34.jpg',
+  image2: 'https://i.pinimg.com/564x/25/7f/66/257f66c1b089a40a3499cefabfa44a34.jpg',
+  image3: 'https://i.pinimg.com/564x/25/7f/66/257f66c1b089a40a3499cefabfa44a34.jpg',
+  image4: 'https://i.pinimg.com/564x/25/7f/66/257f66c1b089a40a3499cefabfa44a34.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Jacket').first,
 )
@@ -262,6 +289,9 @@ products << Product.create!(
   description: 'This simple top will be a great addition to your wardrobe',
   price: '50.00',
   image: 'https://i.pinimg.com/564x/50/dc/d4/50dcd49b0f1d910cab814820d1e9dd34.jpg',
+  image2: 'https://i.pinimg.com/564x/50/dc/d4/50dcd49b0f1d910cab814820d1e9dd34.jpg',
+  image3: 'https://i.pinimg.com/564x/50/dc/d4/50dcd49b0f1d910cab814820d1e9dd34.jpg',
+  image4: 'https://i.pinimg.com/564x/50/dc/d4/50dcd49b0f1d910cab814820d1e9dd34.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Top').first,
 )
@@ -272,6 +302,9 @@ products << Product.create!(
   description: 'The perfect dress for your summer. So light you will not feel it',
   price: '80.00',
   image: 'https://i.pinimg.com/564x/86/ae/07/86ae07d1f124ee14cd2ce8dd8ce72f52.jpg',
+  image2: 'https://i.pinimg.com/564x/86/ae/07/86ae07d1f124ee14cd2ce8dd8ce72f52.jpg',
+  image3: 'https://i.pinimg.com/564x/86/ae/07/86ae07d1f124ee14cd2ce8dd8ce72f52.jpg',
+  image4: 'https://i.pinimg.com/564x/86/ae/07/86ae07d1f124ee14cd2ce8dd8ce72f52.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Dress').first,
 )
@@ -282,6 +315,9 @@ products << Product.create!(
   description: 'A splendid nude blazer like no other',
   price: '90.00',
   image: 'https://i.pinimg.com/564x/b8/83/7a/b8837a591b108fbe7edadb6c0f7d2f40.jpg',
+  image2: 'https://i.pinimg.com/564x/b8/83/7a/b8837a591b108fbe7edadb6c0f7d2f40.jpg',
+  image3: 'https://i.pinimg.com/564x/b8/83/7a/b8837a591b108fbe7edadb6c0f7d2f40.jpg',
+  image4: 'https://i.pinimg.com/564x/b8/83/7a/b8837a591b108fbe7edadb6c0f7d2f40.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Jacket').first,
 )
@@ -292,6 +328,9 @@ products << Product.create!(
   description: 'This long shirt will change how you see shirts',
   price: '105.00',
   image: 'https://i.pinimg.com/564x/95/af/f9/95aff96d15f96b8ae7263ee0212a3904.jpg',
+  image2: 'https://i.pinimg.com/564x/95/af/f9/95aff96d15f96b8ae7263ee0212a3904.jpg',
+  image3: 'https://i.pinimg.com/564x/95/af/f9/95aff96d15f96b8ae7263ee0212a3904.jpg',
+  image4: 'https://i.pinimg.com/564x/95/af/f9/95aff96d15f96b8ae7263ee0212a3904.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Shirt').first,
 )
@@ -302,6 +341,9 @@ products << Product.create!(
   description: 'Slim fit jeans that will fit you like a glove or like jeans',
   price: '55.00',
   image: 'https://i.pinimg.com/564x/48/40/9d/48409de9f500edbe6c38dd364f2ce1f4.jpg',
+  image2: 'https://i.pinimg.com/564x/48/40/9d/48409de9f500edbe6c38dd364f2ce1f4.jpg',
+  image3: 'https://i.pinimg.com/564x/48/40/9d/48409de9f500edbe6c38dd364f2ce1f4.jpg',
+  image4: 'https://i.pinimg.com/564x/48/40/9d/48409de9f500edbe6c38dd364f2ce1f4.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Jeans').first,
 )
@@ -312,6 +354,9 @@ products << Product.create!(
   description: 'Cozy white shit that will comfort you in every situation',
   price: '70.00',
   image: 'https://i.pinimg.com/564x/e3/ba/0c/e3ba0c62bc4e63b9b0543c3598778325.jpg',
+  image2: 'https://i.pinimg.com/564x/e3/ba/0c/e3ba0c62bc4e63b9b0543c3598778325.jpg',
+  image3: 'https://i.pinimg.com/564x/e3/ba/0c/e3ba0c62bc4e63b9b0543c3598778325.jpg',
+  image4: 'https://i.pinimg.com/564x/e3/ba/0c/e3ba0c62bc4e63b9b0543c3598778325.jpg',
   brand: Brand.all.sample,
   product_category: ProductCategory.where(category: 'Shirt').first,
 )

@@ -15,7 +15,8 @@
       </div>
       <div class="col-xs-12 col-sm-7 show-page text-left">
         <div class="textbox">
-          <h2><i class="fas fa-heart"></i> <%= @product.name%></h2>
+          <h2><i class="fas fa-ellipsis-v"></i> <%= @product.name%></h2>
+
 
           <h3> <%= humanized_money_with_symbol(@product.price)%></h3>
           <br>
@@ -50,6 +51,12 @@
         <%= f.button :submit, "ADD TO CART", class: "btn-standard" %>
         &nbsp;&nbsp;&nbsp;
 
+
+        <div class="alert alert-warning alert-dismissible" role="alert" id="notification" style="display: none;">
+          <p>Add your size and color!</p>
+          </div>
+
+
         <%= link_to "GO TO CART ", shopping_cart_path(current_user.current_shopping_cart), class:"btn btn-default btn-standard" %>
 <% end %>
         <% end %>
@@ -68,6 +75,27 @@
 
       </div>
     </div>
+
+    <script type="text/javascript">
+    document.getElementById('new_product_variation').addEventListener('submit', function (evt){
+    if(document.getElementById('product_variation_size').value == "" || document.getElementById('product_variation_color').value == "") {
+        evt.preventDefault();
+        n = document.getElementById('notification');
+        n.style.display = "block";
+        }
+    else(submit());
+        // else{console.log('I feel pretty today')};
+       setTimeout(function(){
+        n = document.getElementById('notification');
+        n.style.display = "none";   },  3000);
+        });
+
+    //   document.getElementById('new_product_variation').removeEventListener('click', function (evt){
+    //   if(document.getElementById('product_variation_size').value !== "" && document.getElementById('product_variation_color').value !== "") {
+    //    evt();
+    //    }
+    // });
+    </script>
 
 
 
