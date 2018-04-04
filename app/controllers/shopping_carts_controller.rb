@@ -1,7 +1,3 @@
-
-class ShoppingCartsController < ApplicationController
-  before_action :authenticate_user!, only: [:add_item]
-
 class ShoppingCartsController < ApplicationController
   def new
     @shopping_cart_item = ShoppingCartItem.new
@@ -13,10 +9,10 @@ class ShoppingCartsController < ApplicationController
    @product = Product.find(params[:product_id])
    @productVariation = ProductVariation.where(product: @product, size_id: set_variations[:size].to_i, color_id: set_variations[:color].to_i )
    # 2 Get from post params info about product variation to identify what are the specificities of desired item
-  if @productVariation.empty?
-    flash[:alert] = "Please enter a size and color."
-    redirect_to product_path(@product)
-  else
+    if @productVariation.empty?
+      flash[:alert] = "Please enter a size and color."
+      redirect_to product_path(@product)
+    else
       # 3 Establish wither we have a shopping cart
       @shoppingCart = ShoppingCart.where(user: current_user, status: false).first
       if @shoppingCart.nil?
