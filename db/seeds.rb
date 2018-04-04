@@ -64,15 +64,44 @@ brand = Brand.create!(
 # generate categories
 puts 'creating product categories'
 ProductCategory.create!(
+  category: 'Blouse'
+)
+
+ProductCategory.create!(
+  category: 'Dress'
+)
+
+ProductCategory.create!(
+  category: 'Ensemble'
+)
+
+ProductCategory.create!(
+  category: 'Jacket'
+)
+
+ProductCategory.create!(
   category: 'Jeans'
 )
 
+
 ProductCategory.create!(
-  category: 'T-shirt'
+  category: 'Shirt'
 )
 
 ProductCategory.create!(
-  category: 'Socks'
+  category: 'Skirt'
+)
+
+ProductCategory.create!(
+  category: 'Sweater'
+)
+
+ProductCategory.create!(
+  category: 'Top'
+)
+
+ProductCategory.create!(
+  category: 'Trousers'
 )
 
 # generate sizes
@@ -132,7 +161,7 @@ products << Product.create!(
   price: '80.00',
   image: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Blouse'
 )
 
 products << Product.create!(
@@ -145,7 +174,7 @@ products << Product.create!(
   image3: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_260/v1522778532/DSC00068_copia.jpg',
   image4: 'http://res.cloudinary.com/megednazednav/image/upload/v1522778256/DSC00039_copia.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Sweater'
 )
 
 products << Product.create!(
@@ -155,7 +184,7 @@ products << Product.create!(
   price: '170.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/c_scale,w_806/v1522774898/DSC09148_copia.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Skirt'
 )
 
 products << Product.create!(
@@ -165,7 +194,7 @@ products << Product.create!(
   price: '150.00',
   image: 'https://cdn.shopify.com/s/files/1/1431/0176/products/Angela_dark_blue_1024x1024.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Jacket'
 )
 
 products << Product.create!(
@@ -175,7 +204,7 @@ products << Product.create!(
   price: '50.00',
   image: 'https://cdn.shopify.com/s/files/1/1431/0176/products/Ethical_fashion_brands_organic_cotton_top_Elisa_front_368311b7-64c6-4949-9538-7608f356b950_1024x1024.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Top'
 )
 
 products << Product.create!(
@@ -185,7 +214,7 @@ products << Product.create!(
   price: '80.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522659696/9129624-1-multi.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Dress'
 )
 
 products << Product.create!(
@@ -195,7 +224,7 @@ products << Product.create!(
   price: '90.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522659696/9033390-1-nude.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Jacket'
 )
 
 products << Product.create!(
@@ -205,7 +234,7 @@ products << Product.create!(
   price: '105.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522660822/MUJ-T4384-BLACK.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Shirt'
 )
 
 products << Product.create!(
@@ -215,7 +244,7 @@ products << Product.create!(
   price: '55.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522660822/MDN-P8212-UTILITYBLUE.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Jeans'
 )
 
 products << Product.create!(
@@ -225,7 +254,7 @@ products << Product.create!(
   price: '70.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522660822/LAW-T4383-WHITE.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Shirt'
 )
 
 products << Product.create!(
@@ -235,7 +264,7 @@ products << Product.create!(
   price: '120.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522660822/S8TK-J4801M-245-Legacy.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Top'
 )
 
 products << Product.create!(
@@ -245,7 +274,7 @@ products << Product.create!(
   price: '120.00',
   image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651a66ebbd1a5c3be28b08/1499798126449/?format=2500w',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Dress'
 )
 
 products << Product.create!(
@@ -255,7 +284,7 @@ products << Product.create!(
   price: '85.00',
   image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/5977b1e02e69cffa18f371ec/1501016556294/?format=750w',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Dress'
 )
 
 products << Product.create!(
@@ -265,7 +294,7 @@ products << Product.create!(
   price: '280.00',
   image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651af83e00be66d5f7b256/1499798296479/?format=750w',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Ensemble'
 )
 
 products << Product.create!(
@@ -275,7 +304,7 @@ products << Product.create!(
   price: '50.99',
   image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b252e69cf0722dbac40/1499798319087/?format=1000w',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Dress'
 )
 
 products << Product.create!(
@@ -285,7 +314,7 @@ products << Product.create!(
   price: '90.00',
   image: 'https://static1.squarespace.com/static/5442b6cce4b0cf00d1a3bef2/t/59651b4acd0f68b5392996c7/1501015849713/?format=1000w',
   brand: Brand.all.sample,
-  product_category: ProductCategory.all.sample
+  product_category: 'Dress'
 )
 
 # generate sustainability infos
