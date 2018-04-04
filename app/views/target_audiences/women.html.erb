@@ -2,16 +2,14 @@
   <div class="container text-center">
     <%= image_tag ("https://res.cloudinary.com/megednazednav/image/upload/v1522237746/The%20Good%20Style/logo.png"), width: "100px", class: "centered-logo" %>
     <h1>Shop our beautiful women's clothes</h1>
-    <br>
     <div class="row">
-      <div class="col-xs-12 col-sm-12">
-        <%= form_tag '/women', method: :get do %>
-        <%= select_tag(:product_category, options_for_select([['Blouse', 1], ['Dress', 2], ['Ensemble', 3],['Jacket', 4],['Jeans', 5],['Shirt', 6],['Skirt', 7],['Sweater', 8],['Top', 9],['Trousers', 10] ])) %>
-        <%= submit_tag "Filter" %>
+      <div class="filter-categories col-xs-12 col-sm-12">
+        <%= form_tag '/women', method: :get, class:'form-category' do %>
+        <%= select_tag(:product_category, options_for_select([['Blouse', 1], ['Dress', 2], ['Ensemble', 3],['Jacket', 4],['Jeans', 5],['Shirt', 6],['Skirt', 7],['Sweater', 8],['Top', 9],['Trousers', 10] ]), class: 'form-control', prompt: 'Select a category') %>
+        <%= submit_tag "Filter", class: 'form-control' %>
         <% end %>
       </div>
     </div>
-    <br>
     <div class="row">
       <% @products.each do |product| %>
       <%= link_to product_path(product) do %>
