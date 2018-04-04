@@ -1,4 +1,6 @@
-# frozen_string_literal: true
+
+class ShoppingCartsController < ApplicationController
+  before_action :authenticate_user!, only: [:add_item]
 
 class ShoppingCartsController < ApplicationController
   def new
@@ -8,20 +10,25 @@ class ShoppingCartsController < ApplicationController
   def add_item
     # controller post receiving wish from user to add item to shopping cart
     # 1 Find Item from Route info
-    @product = Product.find(params[:product_id])
-    # 2 Get from post params info about product variation to identify what are the specificities of desired item
-    @productVariation = ProductVariation.where(product: @product, size_id: set_variations[:size].to_i, color_id: set_variations[:color].to_i)
-    # 3 Establish wither we have a shopping cart
-    @shoppingCart = ShoppingCart.where(user: current_user, status: false).first
-    if @shoppingCart.nil?
-      # 4 if we don't have a shopping cart, we create one
-      @shoppingCart = ShoppingCart.create(user: current_user, status: false)
-    end
-    # 5 as we have all the infos to create a shopping cart item in DB, we create it
-    ShoppingCartItem.create!(product_variation: @productVariation.first, shopping_cart: @shoppingCart)
-    # 6 render js code so we dont change page and can yet update
-    flash[:notice] = 'This product has been added to the cart'
+   @product = Product.find(params[:product_id])
+   @productVariation = ProductVariation.where(product: @product, size_id: set_variations[:size].to_i, color_id: set_variations[:color].to_i )
+   # 2 Get from post params info about product variation to identify what are the specificities of desired item
+  if @productVariation.empty?
+    flash[:alert] = "Please enter a size and color."
     redirect_to product_path(@product)
+  else
+      # 3 Establish wither we have a shopping cart
+      @shoppingCart = ShoppingCart.where(user: current_user, status: false).first
+      if @shoppingCart.nil?
+        # 4 if we don't have a shopping cart, we create one
+        @shoppingCart = ShoppingCart.create(user: current_user, status: false)
+      end
+      # 5 as we have all the infos to create a shopping cart item in DB, we create it
+      ShoppingCartItem.create!(product_variation: @productVariation.first, shopping_cart: @shoppingCart)
+      # 6 render js code so we dont change page and can yet update
+      flash[:notice] = "This product has been added to the cart"
+      redirect_to product_path(@product)
+    end
   end
 
   def create
