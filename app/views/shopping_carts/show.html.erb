@@ -41,10 +41,10 @@
           </div>
 
             <div class="shopping-cart-price">
-              <p><%= item.product_variation.product.price %> €</p>
+              <p>€ <%= item.product_variation.product.price %></p>
             </div>
             <div class="shopping-cart-price-quantity">
-              <p><strong><%= item.calculate_total %> €</strong></p>
+              <p><strong>€ <%= item.calculate_total %></strong></p>
             </div>
 
           <div class="shopping-cart-delete">
@@ -66,11 +66,11 @@
 
       <%= form_tag new_shopping_cart_payment_path(@shoppingCart), method: :get do %>
       <%= hidden_field_tag 'order_sku', @shoppingCart.id %>
-      <p>Products:&nbsp;<strong><%= @shoppingCart.total %>€</strong>&nbsp;T.T.C</p>
-      <p>Delivery cost:<strong>8€</strong></p>
+      <p>Products:&nbsp;<strong><%= @shoppingCart.total %> €</strong>&nbsp;incl. VAT</p>
+      <p>Delivery cost:<strong> 8 €</strong></p>
 
       <br>
-      TOTAL:&nbsp;<strong><%= @shoppingCart.total + Money.new(800)%>€</strong>
+      TOTAL:&nbsp;<strong><%= @shoppingCart.total + Money.new(800)%> €</strong>
       <br>
       <br>
       <br>
