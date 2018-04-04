@@ -1,26 +1,34 @@
 
-<div class="container-thanks">
+<div class="container thankscontainer text-center">
+    <div class="thanks-main-info">
+      <h3><i class="fas fa-heart"></i>&nbsp;&nbsp;Thanks</h3>
+      <br>
+      <br>
 
-  <div class="row-thanks">
-    <div class="thanks-main-info col-xs-12 col-sm-12">
-      <h3><i class="fas fa-ellipsis-v"></i>   Thanks</h3>
-      <div class="thanks-sustainable">
-        <img src="http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg" alt="people" style="width: 40px;">
-        <p>"Great, <em><%=@user.name %></em>! You're sooo good styled!"</p>
-        <p> With your order, you're acting for a better world.</p>
-      </div>
+        <p>"Great, <%=@user.name.split(" ").first %>, you are well styled!</p>
+        <p>Thanks for going on this mission for a better world with us.</p>
+
+      <img src="http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg" alt="people" class="happyman" style="width: 40px;">
       <div class="thanks-references">
-        <p>Here are the references of your order:<strong> <%= Time.now.strftime("%Y/%m") %>/order-<%= @shopping_cart.id%></strong> .</p>
-        <p>You can use these references for your further communications.</p>
+        <p>Here's the reference of your order:<strong> <%= Time.now.strftime("%Y/%m") %>/order-<%= @shopping_cart.id%></strong> .</p>
+        <p>You can use this reference in further communication with us.</p>
+      </div>
+      <div>
+        <p>This is what you ordered</p>
+
+        <% @shopping_cart.shopping_cart_items.each do |item| %>
+        <%= image_tag item.product_variation.product.image, class: "thanksimage" %>
+        <% end %>
+
+
       </div>
       <div class="thanks-mail">
-        <p>You can find back <strong>all the details of your order on your email</strong> :<%=@user.email %>.</p>
-        <p>If you don't receive our confirmation mail, please let us know: customerservice@thegoodstyle.store . </p>
+        <p>You can find back <strong>all the details of your order </strong>on your email:&nbsp;<%=@user.email %>.</p>
+        <p>If you don't receive our confirmation mail, please let us know: hello@thegoodstyle.store . </p>
       </div>
       <div class="thanks-seeyou">
-        <p>We hope to see you back again on<em> Thegoodstyle.store</em>.</p>
+        <p>We hope to see you back again on<em> thegoodstyle.store</em>.</p>
       </div>
     </div>
   </div>
 
-</div>
