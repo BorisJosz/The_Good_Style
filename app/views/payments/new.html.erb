@@ -12,7 +12,7 @@
 <%= form_tag new_shopping_cart_payment_path(@shopping_cart) do %>
   <article>
     <label class="amount">
-      <h4><span>Total: <%= humanized_money_with_symbol(@shopping_cart.total) %></span>
+      <h4><span>Total: <%= humanized_money_with_symbol(@shopping_cart.total + Money.new(800)) %></span>
     </label>
   </article>
 <br>
