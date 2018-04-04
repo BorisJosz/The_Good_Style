@@ -3,7 +3,13 @@
 class TargetAudiencesController < ApplicationController
   def women
     target = TargetAudience.find_by(gender: 'women')
-    @products = Product.where(target_audience: target)
+
+    if params[:product_category]
+      category = ProductCategory.find(params[:product_category])
+      @products = Product.where(target_audience: target, product_category: category)
+    else
+      @products = Product.where(target_audience: target)
+    end
   end
 
   def men

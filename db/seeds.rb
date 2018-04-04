@@ -160,7 +160,7 @@ products << Product.create!(
   price: '120.00',
   image: 'https://i.pinimg.com/564x/96/56/3e/96563e0a11b80385d0d7985f5407cd0e.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category:'Blouse').first,
+  product_category: ProductCategory.where(category:'Top').first,
 )
 
 products << Product.create!(
@@ -190,7 +190,7 @@ products << Product.create!(
   price: '170.00',
   image: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Jacket').first,
+  product_category: ProductCategory.where(category: 'Skirt').first,
 )
 
 products << Product.create!(
@@ -200,7 +200,7 @@ products << Product.create!(
   price: '280.00',
   image: 'https://i.pinimg.com/564x/c5/f0/63/c5f06323ef13e33b9556930ffc8f1059.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Top').first,
+  product_category: ProductCategory.where(category: 'Ensemble').first,
 )
 
 products << Product.create!(
@@ -213,7 +213,7 @@ products << Product.create!(
   image3: 'http://res.cloudinary.com/megednazednav/image/upload/v1522778256/DSC00039_copia.jpg',
   image4: 'http://res.cloudinary.com/megednazednav/image/upload/c_scale,w_492/v1522838652/DSC00660_copia.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Dress').first,
+  product_category: ProductCategory.where(category: 'Sweater').first,
 )
 
 products << Product.create!(
@@ -223,7 +223,7 @@ products << Product.create!(
   price: '50.99',
   image: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Jacket').first,
+  product_category: ProductCategory.where(category: 'Dress').first,
 )
 
 products << Product.create!(
@@ -233,7 +233,7 @@ products << Product.create!(
   price: '90.00',
   image: 'https://i.pinimg.com/564x/c1/85/1d/c1851d32d78f7290afd3474425a609ef.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Shirt').first,
+  product_category: ProductCategory.where(category: 'Dress').first,
 )
 
 products << Product.create!(
@@ -243,7 +243,7 @@ products << Product.create!(
   price: '80.00',
   image: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Jeans').first,
+  product_category: ProductCategory.where(category: 'Blouse').first,
 )
 
 products << Product.create!(
@@ -253,7 +253,7 @@ products << Product.create!(
   price: '150.00',
   image: 'https://i.pinimg.com/564x/25/7f/66/257f66c1b089a40a3499cefabfa44a34.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Shirt').first,
+  product_category: ProductCategory.where(category: 'Jacket').first,
 )
 
 products << Product.create!(
@@ -283,7 +283,7 @@ products << Product.create!(
   price: '90.00',
   image: 'https://i.pinimg.com/564x/b8/83/7a/b8837a591b108fbe7edadb6c0f7d2f40.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Dress').first,
+  product_category: ProductCategory.where(category: 'Jacket').first,
 )
 
 products << Product.create!(
@@ -293,7 +293,7 @@ products << Product.create!(
   price: '105.00',
   image: 'https://i.pinimg.com/564x/95/af/f9/95aff96d15f96b8ae7263ee0212a3904.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Ensemble').first,
+  product_category: ProductCategory.where(category: 'Shirt').first,
 )
 
 products << Product.create!(
@@ -303,7 +303,7 @@ products << Product.create!(
   price: '55.00',
   image: 'https://i.pinimg.com/564x/48/40/9d/48409de9f500edbe6c38dd364f2ce1f4.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Dress').first,
+  product_category: ProductCategory.where(category: 'Jeans').first,
 )
 
 products << Product.create!(
@@ -313,7 +313,7 @@ products << Product.create!(
   price: '70.00',
   image: 'https://i.pinimg.com/564x/e3/ba/0c/e3ba0c62bc4e63b9b0543c3598778325.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Dress').first,
+  product_category: ProductCategory.where(category: 'Shirt').first,
 )
 
 # generate sustainability infos
