@@ -83,7 +83,6 @@ ProductCategory.create!(
   category: 'Jeans'
 )
 
-
 ProductCategory.create!(
   category: 'Shirt'
 )
