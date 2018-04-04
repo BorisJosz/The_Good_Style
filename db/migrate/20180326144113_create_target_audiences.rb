@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateTargetAudiences < ActiveRecord::Migration[5.1]
   def change
     create_table :target_audiences do |t|

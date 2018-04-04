@@ -1,0 +1,91 @@
+.sustainability-infos {
+  cursor: default;
+  font-size: 18px;
+  height: 50px;
+  line-height: 30px;
+  position: relative;
+  flex: 1 1 25%;
+
+
+  .popover {
+    background-color: rgba(0,0,0,0.85);
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    color: #fff;
+    display: none;
+    font-size: 14px;
+    left: -50px;
+    top: -100px;
+    padding: 5px 10px;
+    position: absolute;
+    width: 300px;
+    z-index: 4;
+  }
+
+  &:hover {
+      .popover {
+        display: block;
+        -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
+        -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
+        -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
+      }
+    }
+}
+
+@-webkit-keyframes fade-in {
+  from   { opacity: 0; }
+  to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  from   { opacity: 0; }
+  to { opacity: 1; }
+}
+@-ms-keyframes fade-in {
+  from   { opacity: 0; }
+  to { opacity: 1; }
+}
+@-webkit-keyframes move-up {
+  from   { bottom: 30px; }
+  to { bottom: 42px; }
+}
+@-moz-keyframes move-up {
+  from   { bottom: 30px; }
+  to { bottom: 42px; }
+}
+@-ms-keyframes move-up {
+  from   { bottom: 30px; }
+  to { bottom: 42px; }
+}
+
+.information {
+  display: flex;
+  align-content: space-between;
+}
+
+
+.infotitle {
+  padding-bottom: 10px;
+  & p {
+    font-weight: 300;
+  }
+}
+
+.infodiv {
+  background-color: #F2F2F2;
+  width: 80%;
+  position: absolute;
+  bottom: -173px;
+  padding: 25px 0;
+}
+
+#new_product_variation {
+  position: absolute;
+  bottom: 200px;
+  width: 100%
+}
+
+.selectorarrows {
+  width: 80%
+}
+
+

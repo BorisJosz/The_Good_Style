@@ -1,5 +1,6 @@
+
 .show-page {
-  height: 500px;
+  height: 700px;
   padding: 0
 }
 
@@ -37,23 +38,23 @@
 }
 
 .paddingrow {
-  padding: 50px;
+  padding: 50px 50px 80px 50px;
 }
 
 .selectors {
   display: flex;
-  position: absolute;
   bottom: 60px;
-  width: 70%;
+  width: 100%;
 }
 
 .select {
-  flex: 1 1 50%;
+  flex: 1 1 auto;
 }
 
 .select h5 {
   font-weight: 400;
 }
+
 
 .fa-chevron-down {
   color: #F0B917;
@@ -61,7 +62,7 @@
 
 .backgroundbrand {
   background-color: #76B39D;
-  padding: 25px 50px;
+  padding: 40px 80px;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
@@ -85,9 +86,10 @@
 }
 
 .infobox {
-  padding: 25px 25px 70px 25px;
+  padding: 25px 25px 25px 25px;
   display: flex;
   align-items: center;
+  background-color: white;
 }
 
 .subinfobox {
@@ -108,5 +110,23 @@
 
 .infodetailright {
   flex: 1 1 80%;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
+}
+
+.smallimagebox {
+  padding-top: 30px;
+  height: 200px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  padding-right: 50px;
+  grid-column-gap: 20px;
+  border-right: 1px solid #B1B4B7;
+}
+
+.small-image {
+  grid-row: 1;
+  height: auto;
+  max-width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
 }

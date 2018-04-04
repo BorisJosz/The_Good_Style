@@ -1,5 +1,5 @@
+# frozen_string_literal: true
+
 class RemoveSustainabilityInfoFromProducts < ActiveRecord::Migration[5.1]
-  def change
-    remove_column :products, :sustainability_info_id
-  end
+  def change; end
 end

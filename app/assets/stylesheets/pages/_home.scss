@@ -1,6 +1,7 @@
 .wrapper {
   background-color: white;
   min-height: 100vh;
+
 }
 
 h1 {
@@ -14,19 +15,19 @@ h1 {
 
 .sustainability-info {
   width: 100vw;
-  background-color: #F9F8EB;
+  background-color: #E5E5E5;
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   p {
     font-size: 17px;
     font-weight: 300;
     text-align: justify;
-    margin-top: 50px;
   }
 }
 
 .sustainability-info-container {
-  width: 80vw;
+  width: 70vw;
 }
 
 .sustainability-info-container h3 {
@@ -37,3 +38,4 @@ h1 {
   text-style: italic;
   opacity: 0.8;
 }
+

@@ -1,6 +1,8 @@
+
 class ShoppingCartsController < ApplicationController
   before_action :authenticate_user!, only: [:add_item]
 
+class ShoppingCartsController < ApplicationController
   def new
     @shopping_cart_item = ShoppingCartItem.new
   end
@@ -43,16 +45,11 @@ class ShoppingCartsController < ApplicationController
     @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
   end
 
-  def destroy
-    @shopping_cart_item = ShoppingCartItem.find(params[:id])
-    @shopping_cart_item.destroy
-  end
-
   def quantity
     @shopping_cart_item = ShoppingCartItem.find(set_shopping_cart_items[:id])
     @shopping_cart_item.quantity = set_shopping_cart_items[:quantity]
     @shopping_cart_item.save
-     @shopping_cart_items = ShoppingCartItem.all
+    @shopping_cart_items = ShoppingCartItem.all
     @shoppingCart = ShoppingCart.find_by(user: current_user, status: false)
     redirect_to shopping_cart_path(@shoppingCart)
   end
@@ -60,5 +57,4 @@ class ShoppingCartsController < ApplicationController
   def set_shopping_cart_items
     params.require(:shopping_cart_item).permit(:quantity, :id)
   end
-
 end

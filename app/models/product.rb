@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Product < ApplicationRecord
   belongs_to :target_audience
   belongs_to :brand
@@ -10,7 +12,7 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :image, presence:true
+  validates :image, presence: true
 
   monetize :price_cents
 end

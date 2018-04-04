@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402105827) do
+ActiveRecord::Schema.define(version: 20180403175231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,12 +57,19 @@ ActiveRecord::Schema.define(version: 20180402105827) do
     t.string "name"
     t.text "description"
     t.string "image"
+    t.text "material_info"
+    t.text "location_info"
+    t.text "people_info"
+    t.text "distance_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "target_audience_id"
     t.bigint "brand_id"
     t.bigint "product_category_id"
     t.integer "price_cents", default: 0, null: false
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["product_category_id"], name: "index_products_on_product_category_id"
     t.index ["target_audience_id"], name: "index_products_on_target_audience_id"
@@ -120,10 +127,14 @@ ActiveRecord::Schema.define(version: 20180402105827) do
     t.text "sustainability_class"
     t.text "description"
     t.text "rating"
+    t.bigint "products_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "product_id"
+    t.string "icon"
+    t.string "icon_pale"
     t.index ["product_id"], name: "index_sustainability_infos_on_product_id"
+    t.index ["products_id"], name: "index_sustainability_infos_on_products_id"
   end
 
   create_table "target_audiences", force: :cascade do |t|

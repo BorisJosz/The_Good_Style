@@ -43,7 +43,7 @@
   font-size: 18px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #ECAD34;
   text-decoration: none;
 }
 
@@ -93,3 +93,34 @@
   color: white;
   margin-right: 10px;
 }
+
+.fa-shopping-cart {
+  margin-right: 10px;
+}
+
+.shopping-cart-item-number {
+  color: #155061;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px; /* <-- this is what you must define */
+  text-align: center;
+  vertical-align: center;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+.navbar-wagon-item, .navbar-wagon-link {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.navbar-wagon-item.navbar-wagon-link {
+  &:hover p {
+  background-color: #ECAD34;
+  }
+}
+
