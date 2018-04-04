@@ -29,9 +29,9 @@
           </div>
           </div>
           <div class="shopping-cart-info">
-            <p><i class="fas fa-ellipsis-v"></i><%= item.product_variation.product.name %></p>
-            <p><i class="fas fa-ellipsis-v white"></i><%= item.product_variation.size.size %></p>
-            <p><i class="fas fa-ellipsis-v white"></i><%= item.product_variation.color.color %></p>
+            <p><i class="fas fa-heart"></i><%= item.product_variation.product.name %></p>
+            <p><i class="fas fa-heart white"></i><%= item.product_variation.size.size %></p>
+            <p><i class="fas fa-heart white"></i><%= item.product_variation.color.color %></p>
           </div>
           <div class="shopping-cart-quantity">
             <%= simple_form_for item, url: quantity_path do |f| %>
