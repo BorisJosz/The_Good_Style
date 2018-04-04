@@ -9,8 +9,10 @@ class UserMailer < ApplicationMailer
     # This will render a view in `app/views/user_mailer`!
   end
 
-  def confirm_payment(user)
-    mail(to: user, subject: 'Payment Confirmation')
+  def confirm_payment(shopping_cart)
+    @user = shopping_cart.user
+    @cart = shopping_cart
+    mail(to: @user.email, subject: 'Payment Confirmation')
   end
 
 end
