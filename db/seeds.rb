@@ -40,10 +40,10 @@ TargetAudience.create!(
 # generate user
 puts 'creating users'
 user = User.create!(
-  name: 'John Smith',
+  name: 'Meg Vandezande',
   address: 'White House, US of A',
   telephone: '911',
-  email: 'John.Smith@gmail.com',
+  email: 'meg@gmail.com',
   photo: 'http://d3trabu2dfbdfb.cloudfront.net/8/9/8916142_300x300_1.jpeg',
   password: '123456',
   password_confirmation: '123456'
@@ -94,9 +94,6 @@ brand = Brand.create!(
 
 # generate categories
 puts 'creating product categories'
-ProductCategory.create!(
-  category: 'Blouse'
-)
 
 ProductCategory.create!(
   category: 'Dress'
@@ -104,22 +101,6 @@ ProductCategory.create!(
 
 ProductCategory.create!(
   category: 'Ensemble'
-)
-
-ProductCategory.create!(
-  category: 'Jacket'
-)
-
-ProductCategory.create!(
-  category: 'Jeans'
-)
-
-ProductCategory.create!(
-  category: 'Shirt'
-)
-
-ProductCategory.create!(
-  category: 'Skirt'
 )
 
 ProductCategory.create!(
@@ -160,24 +141,17 @@ Size.create!(
 # generate colors
 puts 'creating colors'
 Color.create!(
-  color: 'red'
+  color: 'white'
 )
 
 Color.create!(
-  color: 'blue'
-)
-
-Color.create!(
-  color: 'green'
+  color: 'grey'
 )
 
 Color.create!(
   color: 'black'
 )
 
-Color.create!(
-  color: 'white'
-)
 
 # generate products
 puts 'creating products'
@@ -207,12 +181,12 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
   image4: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category:'Sweater').first,
+  product_category: ProductCategory.where(category:'Ensemble').first,
 )
 
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
-  name: 'Long Skirt',
+  name: 'Wide Trousers',
   description: 'Wow your partner in this simple yet elegant dress',
   price: '85.00',
   image: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
@@ -220,7 +194,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
   image4: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Skirt').first,
+  product_category: ProductCategory.where(category: 'Trousers').first,
 )
 
 products << Product.create!(
@@ -233,7 +207,7 @@ products << Product.create!(
   image3: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
   image4: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
   brand: Brand.where(name: 'Fabbrikka').first,
-  product_category: ProductCategory.where(category: 'Skirt').first,
+  product_category: ProductCategory.where(category: 'Top').first,
 )
 
 products << Product.create!(
@@ -253,7 +227,7 @@ products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'Spacey sweater',
   description: "Zanna is a spacey sweater with a fun detail on each shoulder.
-Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly.",
+Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly. This sweater is very easy to combine with any trousers or pair of jeans. Our model is 1m75 tall and wears size S.",
   price: '99.00',
   image: 'http://res.cloudinary.com/megednazednav/image/upload/v1522778486/DSC00051_copia.jpg',
   image2: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_260/v1522778532/DSC00068_copia.jpg',
@@ -273,7 +247,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
   image4: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Dress').first,
+  product_category: ProductCategory.where(category: 'Top').first,
 )
 
 products << Product.create!(
@@ -286,7 +260,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/c1/85/1d/c1851d32d78f7290afd3474425a609ef.jpg',
   image4: 'https://i.pinimg.com/564x/c1/85/1d/c1851d32d78f7290afd3474425a609ef.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Dress').first,
+  product_category: ProductCategory.where(category: 'Top').first,
 )
 
 products << Product.create!(
@@ -299,7 +273,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
   image4: 'https://i.pinimg.com/564x/b8/a6/52/b8a652b00f4c725a393f26de42db37f7.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Blouse').first,
+  product_category: ProductCategory.where(category: 'Top').first,
 )
 
 products << Product.create!(
@@ -312,7 +286,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/25/7f/66/257f66c1b089a40a3499cefabfa44a34.jpg',
   image4: 'https://i.pinimg.com/564x/25/7f/66/257f66c1b089a40a3499cefabfa44a34.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Jacket').first,
+  product_category: ProductCategory.where(category: 'Top').first,
 )
 
 products << Product.create!(
@@ -338,7 +312,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/86/ae/07/86ae07d1f124ee14cd2ce8dd8ce72f52.jpg',
   image4: 'https://i.pinimg.com/564x/86/ae/07/86ae07d1f124ee14cd2ce8dd8ce72f52.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Dress').first,
+  product_category: ProductCategory.where(category: 'Trousers').first,
 )
 
 products << Product.create!(
@@ -351,7 +325,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/b8/83/7a/b8837a591b108fbe7edadb6c0f7d2f40.jpg',
   image4: 'https://i.pinimg.com/564x/b8/83/7a/b8837a591b108fbe7edadb6c0f7d2f40.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Jacket').first,
+  product_category: ProductCategory.where(category: 'Ensemble').first,
 )
 
 products << Product.create!(
@@ -364,7 +338,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/95/af/f9/95aff96d15f96b8ae7263ee0212a3904.jpg',
   image4: 'https://i.pinimg.com/564x/95/af/f9/95aff96d15f96b8ae7263ee0212a3904.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Shirt').first,
+  product_category: ProductCategory.where(category: 'Sweater').first,
 )
 
 products << Product.create!(
@@ -377,7 +351,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/48/40/9d/48409de9f500edbe6c38dd364f2ce1f4.jpg',
   image4: 'https://i.pinimg.com/564x/48/40/9d/48409de9f500edbe6c38dd364f2ce1f4.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Jeans').first,
+  product_category: ProductCategory.where(category: 'Top').first,
 )
 
 products << Product.create!(
@@ -390,7 +364,7 @@ products << Product.create!(
   image3: 'https://i.pinimg.com/564x/e3/ba/0c/e3ba0c62bc4e63b9b0543c3598778325.jpg',
   image4: 'https://i.pinimg.com/564x/e3/ba/0c/e3ba0c62bc4e63b9b0543c3598778325.jpg',
   brand: Brand.all.sample,
-  product_category: ProductCategory.where(category: 'Shirt').first,
+  product_category: ProductCategory.where(category: 'Top').first,
 )
 
 # generate sustainability infos
@@ -403,7 +377,7 @@ SustainabilityInfo.create!(
   rating: 5,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
-  product: Product.where(name: 'Comfy sweater').first
+  product: Product.where(name: 'Spacey sweater').first
 )
 
 SustainabilityInfo.create!(
@@ -412,7 +386,7 @@ SustainabilityInfo.create!(
   rating: 4,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
-  product: Product.where(name: 'Comfy sweater').first
+  product: Product.where(name: 'Spacey sweater').first
 )
 
 SustainabilityInfo.create!(
@@ -421,7 +395,7 @@ SustainabilityInfo.create!(
   rating: 2,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
-  product: Product.where(name: 'Comfy sweater').first
+  product: Product.where(name: 'Spacey sweater').first
 )
 
 SustainabilityInfo.create!(
@@ -430,7 +404,7 @@ SustainabilityInfo.create!(
   rating: 4,
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
-  product: Product.where(name: 'Comfy sweater').first
+  product: Product.where(name: 'Spacey sweater').first
 )
 
 # generating product variations
