@@ -44,7 +44,7 @@ user = User.create!(
   name: 'Meg Vandezande',
   address: 'White House, US of A',
   telephone: '911',
-  email: 'meg@gmail.com',
+  email: 'meg.vandezande@gmail.com',
 
   photo: 'http://d3trabu2dfbdfb.cloudfront.net/8/9/8916142_300x300_1.jpeg',
   password: '123456',
