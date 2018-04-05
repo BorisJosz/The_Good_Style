@@ -5,7 +5,7 @@
     <div class="row">
       <div class="filter-categories col-xs-12 col-sm-12">
         <%= form_tag '/women', method: :get, class:'form-category' do %>
-        <%= select_tag(:product_category, options_for_select([['Ensemble', 1],['Jeans', 2],['Sweater', 3],['Top', 4],['Trousers', 5]]), class: 'form-control', prompt: 'Select a category') %>
+        <%= select_tag(:product_category, options_for_select([['Ensemble', 1],['Dress', 2],['Sweater', 3],['Top', 4],['Trousers', 5]]), class: 'form-control', prompt: 'Select a category') %>
         <%= submit_tag "Filter", class: 'form-control' %>
         <% end %>
       </div>
