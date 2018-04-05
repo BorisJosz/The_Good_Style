@@ -24,7 +24,7 @@
 
 
 
-            <%= simple_form_for @product_variations, url: product_add_item_path(@product) do |f| %>
+            <%= simple_form_for @product_variations, url: product_add_item_path(@product), remote: true do |f| %>
 
             <ul class="selectorarrows list-inline text-center">
               <li><%= f.input :size, collection: @product.sizes.uniq, value_method: :id,prompt: "Pick your size",label_method: :size, label:false %></li>
@@ -48,12 +48,16 @@
            <%= link_to "LOG IN TO BUY", new_user_session_path, class:"btn btn-default btn-standard" %>
            <% end %>
            <% unless current_user.nil? %>
-        <%= f.button :submit, "ADD TO CART", class: "btn-standard" %>
+        <%= f.button :submit, "ADD TO CART", class: "btn-standard", id: "enable" %>
         &nbsp;&nbsp;&nbsp;
 
 
         <div class="alert alert-warning alert-dismissible" role="alert" id="notification" style="display: none;">
           <p>Add your size and color!</p>
+          </div>
+
+          <div class="alert alert-info alert-dismissible" role="alert" id="addition" style="display: none;">
+          <p>Yay, added to your cart!</p>
           </div>
 
 
@@ -83,18 +87,24 @@
         n = document.getElementById('notification');
         n.style.display = "block";
         }
-    else(submit());
-        // else{console.log('I feel pretty today')};
+    else if(document.getElementById('product_variation_size').value !== "" && document.getElementById('product_variation_color').value !== "") {
+        evt.preventDefault();
+        a = (document.getElementById('addition'));
+        a.style.display = "block"
+        }
+
        setTimeout(function(){
         n = document.getElementById('notification');
-        n.style.display = "none";   },  3000);
+        n.style.display = "none";
+        a = document.getElementById('addition');
+        a.style.display = "none";
+        alert = document.getElementById('enable');
+        alert.disabled = false  },  3000);
         });
 
-    //   document.getElementById('new_product_variation').removeEventListener('click', function (evt){
-    //   if(document.getElementById('product_variation_size').value !== "" && document.getElementById('product_variation_color').value !== "") {
-    //    evt();
-    //    }
-    // });
+
+
+
     </script>
 
 
