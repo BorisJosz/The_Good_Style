@@ -59,7 +59,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # mail
-
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.default_url_options = { host: 'http://www.TheGoodStyle.store' }
 
