@@ -3,8 +3,8 @@
 Rails.application.configure do
 
   #mail
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'http://www.TheGoodStyle.store' }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.default_url_options = { host: 'http://www.TheGoodStyle.store' }
 
 
   config.action_mailer.default_url_options = { host: 'http://TODO_PUT_YOUR_DOMAIN_HERE' }
