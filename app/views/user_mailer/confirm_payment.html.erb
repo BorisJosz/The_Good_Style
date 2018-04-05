@@ -1,50 +1,74 @@
+<head>
+  <style media="screen" type="text/css">
+
+  .text {
+    font-family:'Barlow', sans-serif;
+  }
+
+  .column-header  {
+    color: #155061;
+    font-weight: bold;
+  }
+
+  .mail-end {
+    color: gray;
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  </style>
+</head>
+<body>
+
+
+
 <div style="display: flex; justify-content: center;">
   <img src="http://res.cloudinary.com/borisj/image/upload/v1522833824/confirmation.jpg" style="width:80%; height:80%; border:none;">
 </div>
 
 
-<div style="display: flex; justify-content: center; margin-top: 10px;">
-  <div style="width: 70vw">
-    <!-- column headers -->
-    <div style="padding: 10px; display: flex;">
-      <div style="padding: 10px; flex: 0 0 20%; font-family:'Barlow', sans-serif;"></div>
-      <div style="text-align: center; color: #155061; font-weight: bold; padding: 10px; flex: 0 0 20%; font-family:'Barlow', sans-serif;">Title</div>
-      <div style="color: #155061; font-weight: bold; text-align: center; padding: 10px; flex: 0 0 10%; font-family:'Barlow', sans-serif;">Size</div>
-      <div style="color: #155061; font-weight: bold; text-align: center; padding: 10px; flex: 0 0 10%; font-family:'Barlow', sans-serif;">Color</div>
-      <div style="color: #155061; font-weight: bold; text-align: right; padding: 10px; flex: 0 0 20%; font-family:'Barlow', sans-serif;">Price</div>
-    </div>
+<div style="margin-top: 10px;">
+
+    <table style="width:100%">
+  <tr>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Size</th>
+    <th>Color</th>
+    <th>Price</th>
+  </tr>
+
+  <% @cart.shopping_cart_items.each do |item| %>
+  <tr>
+    <td><div alt="" style="padding: 10px; background-image: url('<%=item.product_variation.product.image%>'); width: 20%; height: 150px; background-size: cover; flex: 0 0 20%"></div></td>
+    <td><%= item.product_variation.product.name %></td>
+    <td><%= item.product_variation.size.size %></td>
+    <td><%= item.product_variation.color.color %></td>
+    <td><%= item.product_variation.product.price %></td>
+  </tr>
+  <% end %>
+
+</table>
 
 
-    <!-- list of purchases -->
-
-    <% @cart.shopping_cart_items.each do |item| %>
-    <div style="border-top: 1px solid gray; display: flex; padding-top: 10px; padding-bottom: 10px;">
-      <div alt="" style="padding: 10px; background-image: url('<%=item.product_variation.product.image%>'); min-width: 20%; min-height: 150px; background-size: cover; flex: 0 0 20%"></div>
-      <div style="height: 150px; line-height: 150px; text-align: center; padding: 10px; flex: 0 0 20%; font-family:'Barlow', sans-serif;"> <%= item.product_variation.product.name %></div>
-      <div style="height: 150px; line-height: 150px; text-align: center; padding: 10px; flex: 0 0 10%; font-family:'Barlow', sans-serif;"><%= item.product_variation.size.size %></div>
-      <div style="height: 150px; line-height: 150px; text-align: center; padding: 10px; flex: 0 0 10%; font-family:'Barlow', sans-serif;"><%= item.product_variation.color.color %></div>
-      <div style="height: 150px; line-height: 150px; text-align: right; padding: 10px; flex: 0 0 20%; font-family:'Barlow', sans-serif;"><%= item.product_variation.product.price %>€</div>
-    </div>
-    <% end %>
     <div style="border-top: 1px solid gray; display: flex; padding-top: 30px; padding-bottom: 10px;">
-      <div style="text-align: center; flex: 0 0 100%; font-family:'Barlow', sans-serif; font-size: 20px; color: #155061; font-weight: lighter;">The total cost of delivery is <%= Money.new(800) %>€</div>
+      <div>The total cost of delivery is <%= Money.new(800) %>€</div>
     </div>
-  </div>
+
 </div>
 
 <!-- Price total -->
 <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px">
   <div style="width: 70%; padding: 10px; display: flex; margin-bottom: 10px; border: 2px solid #155061;">
-    <p style="text-align: right; flex: 0 0 50%; font-family:'Barlow', sans-serif; font-size: 30px; color: #155061; font-weight: lighter;">The sum total of which cost you</p>
-    <p style="text-align: center; flex: 0 0 50%; font-family:'Barlow', sans-serif; font-size: 30px; color: #155061; font-weight: bold;"><%= @cart.total + Money.new(800) %> €</p>
+    <p class="text">The sum total of which cost you</p>
+    <p class="text"><%= @cart.total + Money.new(800) %> €</p>
   </div>
 </div>
 
 <!-- additional info -->
-<div style="display: flex; justify-content: center">
-  <div style="width: 80%">
-    <p style="border-top: 1px solid gray; padding-top: 20px; text-align: center; font-family:'Barlow', sans-serif; opacity: 0.6">Should you have any questions, feel free to contact us at <a href='http://www.TheGoodStyle.Store' style='text-decoration: none; font-weight: bold'>TheGoodStyle@store.com</a>! Orders are sent after a maximum of 5 business days. This may vary following the brand and product type.</p>
-    <p style="text-align: center; font-family:'Barlow', sans-serif; opacity: 0.6">If an article of clothing is not to your liking, there is a 14 day period in which you can return it for a refund. Contact us for additional details.</p>
-  </div>
+<div style="width: 80%">
+  <p class="text mail-end"  style="border-top: 1px solid gray; padding-top: 20px;">Should you have any questions, feel free to contact us at <a href='http://www.TheGoodStyle.Store' style='text-decoration: none; font-weight: bold'>TheGoodStyle@store.com</a>! Orders are sent after a maximum of 5 business days. This may vary following the brand and product type.</p>
+  <p class="text mail-end">If an article of clothing is not to your liking, there is a 14 day period in which you can return it for a refund. Contact us for additional details.</p>
 </div>
 
+</body>

@@ -1,0 +1,20 @@
+<table style="width:100%">
+  <tr>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Size</th>
+    <th>Color</th>
+    <th>Price</th>
+  </tr>
+
+  <% @cart.shopping_cart_items.each do |item| %>
+  <tr>
+    <td><div alt="" style="padding: 10px; background-image: url('<%=item.product_variation.product.image%>'); width: 20%; height: 150px; background-size: cover; flex: 0 0 20%"></div></td>
+    <td><%= item.product_variation.product.name %></td>
+    <td><%= item.product_variation.size.size %></td>
+    <td><%= item.product_variation.color.color %></td>
+    <td><%= item.product_variation.product.price %></td>
+  </tr>
+  <% end %>
+
+</table>

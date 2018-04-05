@@ -40,10 +40,12 @@ TargetAudience.create!(
 # generate user
 puts 'creating users'
 user = User.create!(
+
   name: 'Meg Vandezande',
   address: 'White House, US of A',
   telephone: '911',
   email: 'meg@gmail.com',
+
   photo: 'http://d3trabu2dfbdfb.cloudfront.net/8/9/8916142_300x300_1.jpeg',
   password: '123456',
   password_confirmation: '123456'
