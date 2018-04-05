@@ -1,9 +1,13 @@
 <div class="wrapper">
   <div class="container text-center">
-    <%= image_tag ("https://res.cloudinary.com/megednazednav/image/upload/v1522237746/The%20Good%20Style/logo.png"), width: "100px", class: "centered-logo" %>
-    <h1>Shop our beautiful women's clothes</h1>
     <div class="row">
-      <div class="filter-categories col-xs-12 col-sm-12">
+      <div class="col-xs-12">
+      <%= image_tag ("https://res.cloudinary.com/megednazednav/image/upload/v1522237746/The%20Good%20Style/logo.png"), width: "100px", class: "centered-logo" %>
+      <h1>Shop our beautiful women's clothes</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="filter-categories col-xs-12">
         <%= form_tag '/women', method: :get, class:'form-category' do %>
         <%= select_tag(:product_category, options_for_select([['Ensemble', 1],['Jeans', 2],['Sweater', 3],['Top', 4],['Trousers', 5]]), class: 'form-control', prompt: 'Select a category') %>
         <%= submit_tag "Filter", class: 'form-control' %>
@@ -13,7 +17,7 @@
     <div class="row">
       <% @products.each do |product| %>
       <%= link_to product_path(product) do %>
-        <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="col-xs-12 col-md-4 col-lg-3">
           <div class = "card text-center">
 
             <div class="card-image-container" style="background-image:url(<%= product.image %>); " alt="cart">
