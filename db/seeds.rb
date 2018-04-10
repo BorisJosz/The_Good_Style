@@ -121,15 +121,7 @@ ProductCategory.create!(
 
 puts 'creating sizes'
 Size.create!(
-  size: 'XL'
-)
-
-Size.create!(
-  size: 'L'
-)
-
-Size.create!(
-  size: 'M'
+  size: 'XS'
 )
 
 Size.create!(
@@ -137,7 +129,15 @@ Size.create!(
 )
 
 Size.create!(
-  size: 'XS'
+  size: 'M'
+)
+
+Size.create!(
+  size: 'L'
+)
+
+Size.create!(
+  size: 'XL'
 )
 
 # generate colors
@@ -163,7 +163,8 @@ products = []
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'Killer Shirt',
-  description: 'Simple top that fits with almost anything',
+  description: "Zanna is a spacey sweater with a fun detail on each shoulder.
+Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly. This sweater is very easy to combine with any trousers or pair of jeans. Our model is 1m75 tall and wears size S.",
   price: '120.00',
   image: 'https://i.pinimg.com/564x/96/56/3e/96563e0a11b80385d0d7985f5407cd0e.jpg',
   image2: 'https://i.pinimg.com/564x/96/56/3e/96563e0a11b80385d0d7985f5407cd0e.jpg',
@@ -176,7 +177,8 @@ products << Product.create!(
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'Casual Deux-pièce',
-  description: 'Made with sustainable materials at heart, a comfortable and light dress to wear on any day',
+  description: "Zanna is a spacey sweater with a fun detail on each shoulder.
+Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly. This sweater is very easy to combine with any trousers or pair of jeans. Our model is 1m75 tall and wears size S.",
   price: '140.00',
   image: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
   image2: 'https://i.pinimg.com/564x/3d/db/a0/3ddba07c3663055477556a0988bf5c77.jpg',
@@ -189,7 +191,8 @@ products << Product.create!(
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'Wide Trousers',
-  description: 'Wow your partner in this simple yet elegant dress',
+  description: "Zanna is a spacey sweater with a fun detail on each shoulder.
+Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly. This sweater is very easy to combine with any trousers or pair of jeans. Our model is 1m75 tall and wears size S.",
   price: '85.00',
   image: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
   image2: 'https://i.pinimg.com/564x/a8/c3/3b/a8c33b538c2e8a50b84b4c7ed91af58b.jpg',
@@ -202,7 +205,8 @@ products << Product.create!(
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'Fun T-shirt',
-  description: 'A simple yet elegant choice that fits everyday occasion',
+  description: "Zanna is a spacey sweater with a fun detail on each shoulder.
+Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly. This sweater is very easy to combine with any trousers or pair of jeans. Our model is 1m75 tall and wears size S.",
   price: '39.00',
   image: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
   image2: 'https://res.cloudinary.com/megednazednav/image/upload/c_scale,w_600/v1522838764/DSC00489_copia.jpg',
@@ -215,7 +219,8 @@ products << Product.create!(
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'White ensemble',
-  description: 'This pair of shorts and t-shirt were made for you',
+  description: "Zanna is a spacey sweater with a fun detail on each shoulder.
+Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly. This sweater is very easy to combine with any trousers or pair of jeans. Our model is 1m75 tall and wears size S.",
   price: '180.00',
   image: 'https://i.pinimg.com/564x/c5/f0/63/c5f06323ef13e33b9556930ffc8f1059.jpg',
   image2: 'https://i.pinimg.com/564x/c5/f0/63/c5f06323ef13e33b9556930ffc8f1059.jpg',
@@ -242,7 +247,8 @@ Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66
 products << Product.create!(
   target_audience: TargetAudience.where(gender: 'women').first,
   name: 'Better Blue Coat',
-  description: 'Arboring a splendid rose beige color, this dress is sure to turn heads',
+  description: "Zanna is a spacey sweater with a fun detail on each shoulder.
+Our sweaters are made of a super soft GOTS-certified fabric, that consists of 66% organic cotton and 34% recycled polyester. This makes them super soft and cuddly. This sweater is very easy to combine with any trousers or pair of jeans. Our model is 1m75 tall and wears size S.",
   price: '199.00',
   image: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
   image2: 'https://i.pinimg.com/564x/0e/b2/ce/0eb2cea8a46fbbdb0fc1491e477c35ff.jpg',
@@ -407,6 +413,558 @@ SustainabilityInfo.create!(
   icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
   icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
   product: Product.where(name: 'Spacey sweater').first
+)
+
+# 2
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Killer Shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Killer Shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Killer Shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Killer Shirt').first
+)
+
+# 3
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Casual Deux-pièce').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Casual Deux-pièce').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Casual Deux-pièce').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Casual Deux-pièce').first
+)
+
+# 4
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Wide Trousers').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Wide Trousers').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Wide Trousers').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Wide Trousers').first
+)
+# 5
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Fun T-shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Fun T-shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Fun T-shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Fun T-shirt').first
+)
+
+# 6
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'White ensemble').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'White ensemble').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'White ensemble').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'White ensemble').first
+)
+# 7
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Better Blue Coat').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Better Blue Coat').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Better Blue Coat').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Better Blue Coat').first
+)
+# 8
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'White Elegance').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'White Elegance').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'White Elegance').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'White Elegance').first
+)
+
+# 9
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Peep-top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Peep-top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Peep-top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Peep-top').first
+)
+
+# 10
+
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Elegant T-shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Elegant T-shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Elegant T-shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Elegant T-shirt').first
+)
+
+# 11
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Refined Top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Refined Top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Refined Top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Refined Top').first
+)
+
+# 12
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Classic Trousers').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Classic Trousers').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Classic Trousers').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Classic Trousers').first
+)
+
+# 13
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Amazing Jumpsuit').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Amazing Jumpsuit').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Amazing Jumpsuit').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Amazing Jumpsuit').first
+)
+#14
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Long White Cardigan').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Long White Cardigan').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Long White Cardigan').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Long White Cardigan').first
+)
+
+# 15
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'Light Blue Top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'Light Blue Top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'Light Blue Top').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'Light Blue Top').first
+)
+
+# 16
+SustainabilityInfo.create!(
+  sustainability_class: 'materials',
+  description: 'Fabbrikka only works with GOTS certified organic cotton. High quality finishings that ensure you will enjoy your sweater for a long time',
+  rating: 5,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/thread_1.svg',
+  product: Product.where(name: 'White Shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'people',
+  description: 'This sweater is made by Samira, a self employed seamstress that has her workshop in the center of Barcelona.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/happy-man_1.svg',
+  product: Product.where(name: 'White Shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'distance',
+  description: 'This product is made in Barcelona',
+  rating: 2,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679977/truck-icon_1.svg',
+  product: Product.where(name: 'White Shirt').first
+)
+
+SustainabilityInfo.create!(
+  sustainability_class: 'workplace',
+  description: 'This piece was created in a small workshop in the center of the city. Since the seamstresses are self-employed, they arrange their working schedule according to their family life.',
+  rating: 4,
+  icon: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_4.svg',
+  icon_pale: 'http://res.cloudinary.com/megednazednav/image/upload/v1522679976/sewing-machine_5.svg',
+  product: Product.where(name: 'White Shirt').first
 )
 
 # generating product variations
